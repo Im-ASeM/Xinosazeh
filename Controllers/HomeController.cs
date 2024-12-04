@@ -6,6 +6,12 @@ public class HomeController : Controller
     {
         return View();
     }
+
+    [HttpGet]
+    public IActionResult Home2()
+    {
+        return View();
+    }
     
     [HttpGet]
     public IActionResult AboutUs()
