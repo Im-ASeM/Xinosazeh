@@ -26,7 +26,7 @@ public class WorkController : Controller
     [HttpGet]
     public IActionResult Categories()
     {
-        var Category = db.WorkCategories_tbl.Include(x=>x.Subs).ToList();
+        var Category = db.WorkCategories_tbl.Include(x => x.Subs).ToList();
         ViewBag.Categories = Category;
         return View();
     }
@@ -52,7 +52,7 @@ public class WorkController : Controller
     public IActionResult DelCat(int id)
     {
         var check = db.WorkCategories_tbl.Find(id);
-        if(check == null) return RedirectToAction("index", "work", new { Area = "Admin" });
+        if (check == null) return RedirectToAction("index", "work", new { Area = "Admin" });
         db.WorkCategories_tbl.Remove(check);
         db.SaveChanges();
         return RedirectToAction("Categories", "work", new { Area = "Admin" });
@@ -60,10 +60,51 @@ public class WorkController : Controller
     public IActionResult DelPost(int id)
     {
         var check = db.WorkPosts_tbl.Find(id);
-        if(check == null) return RedirectToAction("index", "work", new { Area = "Admin" });
+        if (check == null) return RedirectToAction("index", "work", new { Area = "Admin" });
         db.WorkPosts_tbl.Remove(check);
         db.SaveChanges();
         return RedirectToAction("index", "work", new { Area = "Admin" });
     }
 
+    [HttpGet]
+    public IActionResult AddWorkPost()
+    {
+        var Category = db.WorkCategories_tbl.ToList();
+        ViewBag.Categories = Category;
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult NewWorkPost(NewWorkPost NewPost)
+    {
+        if (NewPost.isNullOrEmpty())
+        {
+            return BadRequest("khalie");
+        }
+
+        WorkPost result = new WorkPost
+        {
+            body = NewPost.body,
+            Discription = NewPost.Discription,
+            footer = NewPost.footer,
+            images = NewPost.images,
+            mainImg = NewPost.mainImg,
+            Title = NewPost.Title
+        };
+
+        db.WorkPosts_tbl.Add(result);
+        db.SaveChanges();
+
+        foreach (int id in NewPost.CategoriesId)
+        {
+            WorkPC cat = new WorkPC
+            {
+                WorkCatId = id,
+                WorkPostId = result.Id
+            };
+            db.WorkPC_tbl.Add(cat);
+            db.SaveChanges();
+        }
+        return Ok("ok shod");
+    }
 }

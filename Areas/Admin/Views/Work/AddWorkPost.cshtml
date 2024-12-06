@@ -1,0 +1,68 @@
+<div class="container-xxl flex-grow-1 container-p-y">
+    <div class="col-xxl">
+
+        <div class="card mb-4">
+            <form action="/Admin/Work/NewWorkPost" method="post">
+                <h5 class="card-header heading-color">پست جدید</h5>
+                <div class="card-body row">
+
+                    <div class="mb-3 col-lg-6 col-xl-6 col-12">
+                        <label for="PostTitle" class="form-label">تایتل پست</label>
+                        <input type="text" class="form-control" id="PostTitle" placeholder="تایتل پست را وارد کنید"
+                            aria-describedby="defaultFormControlHelp" name="Title" autofocus required>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-12 mb-4">
+                        <label for="select2Basic" class="form-label">دسته‌بندی‌</label>
+                        <select id="select2Basic" class="select2 form-select form-select" data-allow-clear="true"
+                            name="CategoriesId" required>
+                            <option selected disabled>منو والد را انتخاب کنید</option>
+                            @foreach (WorkCategory Category in ViewBag.Categories)
+                            {
+                                <option value="@Category.Id">@Category.WorkCatName</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="mb-3 col-lg-6 col-xl-6 col-12">
+                        <label for="formFile" class="form-label">تصویر اصلی</label>
+                        <input class="form-control" type="file" id="formFile" OnChange="OnFileChange" required />
+                    </div>
+
+                    <div class="mb-3 col-lg-6 col-xl-6 col-12">
+                        <label for="formFile" class="form-label">تصاویر</label>
+                        <input class="form-control" type="file" id="formFile" OnChange="OnFileChange" multiple required />
+                    </div>
+
+                    <div class="mb-3 col-lg-12 col-xl-12 col-12">
+                        <label for="postCap" class="form-label">کپشن پست</label>
+                        <textarea type="text" class="form-control" id="postCap"
+                            placeholder="متن کوتاه شده که به موضوع پست اشاره کند."
+                            aria-describedby="defaultFormControlHelp" name="Discription" required></textarea>
+                    </div>
+                    <div class="mb-3 col-lg-12 col-xl-12 col-12">
+                        <label for="postCap" class="form-label">محتوای پست</label>
+                        <textarea type="text" class="form-control" id="postCap"
+                            placeholder="متن اصلی پست را وارد کنید."
+                            aria-describedby="defaultFormControlHelp" name="Discription" required></textarea>
+                    </div>
+                    <div class="mb-3 col-lg-12 col-xl-12 col-12">
+                        <label for="postCap" class="form-label">فوتر پست</label>
+                        <textarea type="text" class="form-control" id="postCap"
+                            placeholder="متن پایانی پست را وارد کنید."
+                            aria-describedby="defaultFormControlHelp" name="Discription" required></textarea>
+                    </div>
+
+
+                    <div class="mt-3 col">
+                        <button class="btn btn-outline-success w-100" style="white-space: nowrap;"
+                            type="submit">
+                            ایجاد پست جدید
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
