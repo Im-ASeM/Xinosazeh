@@ -1,0 +1,72 @@
+@model NewWorkCat
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <div class="col-xxl">
+        <div class="card mb-4">
+
+            <h5 class="card-header heading-color">دسته بندی جدید</h5>
+            <div class="card-body row">
+                <form action="/Admin/Work/AddCat" method="post">
+                    <div class="mb-3 col-lg-12 col-xl-12 col-12">
+                        <label for="MenuName" class="form-label">نام دسته بندی</label>
+                        <input type="text" class="form-control" id="MenuName" placeholder="نام منو را وارد کنید"
+                            aria-describedby="defaultFormControlHelp" asp-for="WorkCatName" autofocus>
+                    </div>
+
+
+                        <div class="mt-3 col row">
+                            <button type="submit" class="btn btn-outline-success" style="white-space: nowrap;"
+                                type="button">
+                                ایجاد دسته بندی
+                            </button>
+                        </div>
+
+                        <div class="mt-3 col-6">
+                            
+                        </div>
+
+
+                </form>
+            </div>
+        </div>
+
+        <div class="card m-1">
+            <h5 class="card-header heading-color">تعداد دسته بندی ها : <strong>@ViewBag.Categories.Count</strong></h5>
+            <div class="card-body">
+                <div class=" table-responsive text-nowrap">
+                    <table class="table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ردیف</th>
+                                <th>عنوان دسته بندی</th>
+                                <th>تعداد پست</th>
+                                <th>عمل‌ها</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-border-bottom-0">
+                            @{
+                                int count = 0;
+                            }
+
+                            @foreach (WorkCategory cat in ViewBag.Categories)
+                            {
+                                count += 1;
+                                <tr>
+                                    <td>@count</td>
+                                    <td>@cat.WorkCatName</td>
+                                    <td>@cat.Subs.Count</td>
+                                    <td>
+                                        <p><a class="dropdown-item btn btn-label-danger m-1"
+                                                href="/admin/work/delCat?id=@cat.Id"
+                                                onclick="(return confirm(`ایا از حذف [@cat.WorkCatName] اطمینان دارید ؟ اطمینان عمل‌ها غیر قابل بازگشت میباشد.`))">حذف</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

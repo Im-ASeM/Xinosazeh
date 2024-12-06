@@ -37,16 +37,16 @@ public class Pubdo
             result += $@"<div class=""project-item {WorkPostCat(post.Categories)} "">
 <div class=""projects-box"">
     <div class=""projects-thumbnail""
-        data-src=""https://theratio.hamsedaweb.ir/wp-content/uploads/2019/11/project1-5.jpg""
+        data-src=""{post.mainImg}""
         data-sub-html=""{post.Title}"">
         <a
             href=""/works/details?id={post.Id}"">
             <img loading=""lazy"" decoding=""async"" width=""720""
                 height=""720""
-                src=""../wp-content/uploads/2019/11/project1-5-720x720-1.jpg""
+                src=""{post.mainImg}""
                 class=""attachment-theratio-portfolio-thumbnail-grid size-theratio-portfolio-thumbnail-grid wp-post-image""
                 alt=""""
-                srcset=""../wp-content/uploads/2019/11/project1-5-720x720-1.jpg 720w, ../wp-content/uploads/2019/11/project1-5-150x150-1.jpg 150w, ../wp-content/uploads/2019/11/project1-5-100x100-1.jpg 100w""
+                srcset=""{post.mainImg} 720w, https://media.tenor.com/hBV2DeZaNiUAAAAM/loading-icon.gif 150w, https://media.tenor.com/hBV2DeZaNiUAAAAM/loading-icon.gif 100w""
                 sizes=""(max-width: 720px) 100vw, 720px""> </a>
 
         <span class=""overlay"">
@@ -58,7 +58,7 @@ public class Pubdo
         <div class=""portfolio-info-inner"">
             <h5><a class=""title-link""
                     href=""/works/details?id={post.Id}""
-                    data-src=""https://theratio.hamsedaweb.ir/wp-content/uploads/2019/11/project1-5.jpg""
+                    data-src=""{post.mainImg}""
                     data-sub-html=""{post.Title}"">{post.Title}</a></h5>
             <p class=""portfolio-cates"">
                 {WorkPostCatName(post.Categories)}
