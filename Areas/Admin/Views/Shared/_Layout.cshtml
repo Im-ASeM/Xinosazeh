@@ -1,7 +1,7 @@
 ﻿@using System.Security.Claims
 <!DOCTYPE html>
-<html lang="fa" class="light-style layout-menu-fixed" dir="rtl" data-theme="theme-default"
-  data-assets-path="~/assets/" data-template="horizontal-menu-template-no-customizer">
+<html lang="fa" class="light-style layout-menu-fixed" dir="rtl" data-theme="theme-default" data-assets-path="~/assets/"
+  data-template="horizontal-menu-template-no-customizer">
 
 <head>
   <meta charset="utf-8">
@@ -11,25 +11,30 @@
   <title>سیستم مدیریت کیفیت</title>
 
   <meta name="description" content="">
-  
+  <script src="~/assets/vendor/libs/jquery/jquery.js"></script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="~/assets/img/favicon/favicon.ico">
 
   <!-- Icons. Uncomment required icon fonts -->
   <link rel="stylesheet" href="~/assets/vendor/fonts/boxicons.css">
-
-  <!-- <link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css" /> -->
-  <!-- <link rel="stylesheet" href="assets/vendor/fonts/flag-icons.css" /> -->
+  <link rel="stylesheet" href="~/assets/vendor/fonts/fontawesome.css">
+  <link rel="stylesheet" href="~/assets/vendor/fonts/flag-icons.css">
 
   <!-- Core CSS -->
-  <link rel="stylesheet" href="~/assets/vendor/css/rtl/core.css">
-  <link rel="stylesheet" href="~/assets/vendor/css/rtl/theme-default.css">
+  <link rel="stylesheet" href="~/assets/vendor/css/rtl/core.css" class="template-customizer-core-css">
+  <link rel="stylesheet" href="~/assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css">
   <link rel="stylesheet" href="~/assets/css/demo.css">
   <link rel="stylesheet" href="~/assets/vendor/css/rtl/rtl.css">
 
   <!-- Vendors CSS -->
   <link rel="stylesheet" href="~/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css">
+  <link rel="stylesheet" href="~/assets/vendor/libs/typeahead-js/typeahead.css">
   <link rel="stylesheet" href="~/assets/vendor/libs/select2/select2.css">
+  <link rel="stylesheet" href="~/assets/vendor/libs/tagify/tagify.css">
+  <link rel="stylesheet" href="~/assets/vendor/libs/bootstrap-select/bootstrap-select.css">
+  <link rel="stylesheet" href="~/assets/vendor/libs/typeahead-js/typeahead.css">
+
   <!-- Helpers -->
   <script src="~/assets/vendor/js/helpers.js"></script>
 
@@ -37,34 +42,36 @@
   <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
   <script src="~/assets/js/config.js"></script>
 
-     <style>
+  <style>
     body {
       background-image: url('/assets/img/backgrounds/bg.jpg');
       background-size: cover;
       background-position: center;
     }
-    label{
+
+    label {
       font-size: 16px !important;
       font-color: black !important;
     }
-    input{
+
+    input {
       font-size: 16px !important;
       border-color: Blue !important;
     }
-    .card{
+
+    .card {
       opacity: 92%;
     }
 
-    .text-muted{
+    .text-muted {
       color: black !important;
     }
 
-    
+
     .nav-item:hover {
       background-color: #f8f9fa !important;
       color: #007bff !important;
     }
-
   </style>
 </head>
 
@@ -77,11 +84,11 @@
       <nav class="layout-navbar navbar navbar-expand-xl align-items-center bg-navbar-theme" id="layout-navbar">
         <div class="container-xxl">
           <div class="navbar-brand app-brand demo d-none d-xl-flex py-0 me-4">
-                     
-                @* <div class="app-brand-logo" style="width:300px"  >
+
+            @* <div class="app-brand-logo" style="width:300px"  >
                 <img src="/assets/img/backgrounds/ilia2.png" alt="brand-logo" class="img-fluid" >
                 </div>  *@
-                <span style="color: blue">| گروه طراحی و ساخت زینوسازه</span>
+            <span style="color: blue">| گروه طراحی و ساخت زینوسازه</span>
 
             <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-xl-none">
               <i class="bx bx-x bx-sm align-middle"></i>
@@ -90,20 +97,20 @@
 
 
           <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-          
+
             <ul class="navbar-nav flex-row align-items-center ms-auto">
-            <li>
-                      <span style="color: blue"> تاریخ جاری سیستم :  1403/12/15 </span>
-            </li>
-              
+              <li>
+                <span style="color: blue"> تاریخ جاری سیستم : 1403/12/15 </span>
+              </li>
+
               <li class="nav-item navbar-dropdown dropdown-user dropdown">
                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                   <span class="btn btn-details">گزینه ها</span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
-                  
+
                   <li>
-                    <a class="dropdown-item" href="/auth/logout" >
+                    <a class="dropdown-item" href="/auth/logout">
                       <i class="bx bx-power-off me-2"></i>
                       <span class="align-middle">خروج</span>
                     </a>
@@ -113,10 +120,10 @@
               <!--/ User -->
             </ul>
           </div>
-         
+
 
           <!-- Search Small Screens -->
-          
+
         </div>
       </nav>
 
@@ -129,38 +136,39 @@
         <!-- Content wrapper -->
         <div class="content-wrapper">
           <!-- Content -->
-                <ul class="nav nav-tabs tabs-line " style="background-color: #ffffffc4 !important ;padding-right:20% !important">
-      
-       <li class="nav-item">
+          <ul class="nav nav-tabs tabs-line "
+            style="background-color: #ffffffc4 !important ;padding-right:20% !important">
 
-            <a  class="nav-link" href="/Admin">
-              صفحه اصلی
-            </a>
+            <li class="nav-item">
 
-        </li>
-        <li class="nav-item">
+              <a class="nav-link" href="/Admin">
+                صفحه اصلی
+              </a>
 
-            <a type="button" class="nav-link" href="/Admin/Work/index">
-              نمونه کار ها
-            </a>
+            </li>
+            <li class="nav-item">
 
-        </li>
-        <li class="nav-item">
+              <a type="button" class="nav-link" href="/Admin/Work/index">
+                نمونه کار ها
+              </a>
 
-            <a type="button" class="nav-link" href="/Admin/Blog/index" >
-             وبلاگ
-            </a>
+            </li>
+            <li class="nav-item">
 
-        </li>
-        <li class="nav-item">
+              <a type="button" class="nav-link" href="/Admin/Blog/index">
+                وبلاگ
+              </a>
 
-            <a type="button" class="nav-link " href="/Admin/Auth/ChangePass">
-             تغییر رمز عبور
-            </a>
+            </li>
+            <li class="nav-item">
 
-        </li>
+              <a type="button" class="nav-link " href="/Admin/Auth/ChangePass">
+                تغییر رمز عبور
+              </a>
 
-      </ul>
+            </li>
+
+          </ul>
           @RenderBody()
           <!--/ Content -->
 
@@ -168,7 +176,7 @@
           <footer class="content-footer footer bg-footer-theme" style="background-color: white !important">
             <div class="container-xxl d-flex flex-wrap justify-content-between py-3 flex-md-row flex-column">
               <div class="mb-2 mb-md-0">
-                
+
                 طراحی شده با ❤️ ارائه شده توسط گروه
                 <span class="footer-link fw-semibold">همپادکو</span>
               </div>
@@ -193,34 +201,30 @@
 
   <!--/ Layout wrapper -->
 
-     <!-- build:js assets/vendor/js/core.js -->
-    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="../assets/vendor/libs/popper/popper.js"></script>
-    <script src="../assets/vendor/js/bootstrap.js"></script>
-    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <!-- build:js assets/vendor/js/core.js -->
+  <script src="~/assets/vendor/libs/popper/popper.js"></script>
+  <script src="~/assets/vendor/js/bootstrap.js"></script>
+  <script src="~/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-    <script src="../assets/vendor/libs/hammer/hammer.js"></script>
+  <script src="~/assets/vendor/libs/hammer/hammer.js"></script>
 
-    <script src="../assets/vendor/libs/i18n/i18n.js"></script>
-    <script src="../assets/vendor/libs/typeahead-js/typeahead.js"></script>
+  <script src="~/assets/vendor/libs/i18n/i18n.js"></script>
+  <script src="~/assets/vendor/libs/typeahead-js/typeahead.js"></script>
 
-    <script src="../assets/vendor/js/menu.js"></script>
-    <!-- endbuild -->
+  <script src="~/assets/vendor/js/menu.js"></script>
+  <!-- endbuild -->
 
-    <!-- Vendors JS -->
-    <script src="../assets/vendor/libs/quill/katex.js"></script>
-    <script src="../assets/vendor/libs/quill/quill.js"></script>
 
-    <!-- Main JS -->
-    <script src="../assets/js/main.js"></script>
 
-    <script src="../assets/vendor/libs/select2/select2.js"></script>
-
-    <!-- Page JS -->
-    <script src="../assets/js/forms-tagify.js"></script>
-    <script src="../assets/js/forms-selects.js"></script>
-    <script src="../assets/js/forms-editors.js"></script>
-
+  <!-- Vendors JS -->
+  <script src="~/assets/vendor/libs/select2/select2.js"></script>
+  <script src="~/assets/vendor/libs/select2/i18n/fa.js"></script>
+  <script src="~/assets/vendor/libs/tagify/tagify.js"></script>
+  <script src="~/assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
+  <script src="~/assets/vendor/libs/bootstrap-select/i18n/defaults-fa_IR.js"></script>
+  <script src="~/assets/vendor/libs/typeahead-js/typeahead.js"></script>
+  <script src="~/assets/vendor/libs/bloodhound/bloodhound.js"></script>
+  
 </body>
 
 </html>

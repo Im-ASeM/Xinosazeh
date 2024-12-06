@@ -8,9 +8,11 @@ namespace test.Areas.Admin.Controllers;
 public class WorkController : Controller
 {
     private readonly Context db;
-    public WorkController(Context _db)
+    private readonly IWebHostEnvironment _env;
+    public WorkController(Context _db, IWebHostEnvironment env)
     {
         db = _db;
+        _env = env;
     }
 
     [HttpGet]
@@ -75,11 +77,18 @@ public class WorkController : Controller
     }
 
     [HttpPost]
-    public IActionResult NewWorkPost(NewWorkPost NewPost)
+    public async Task<ActionResult> NewWorkPost(NewWorkPost NewPost)
     {
-        if (NewPost.isNullOrEmpty())
+        
+        if (NewPost.CanConvertToInt() && NewPost.isNullOrEmpty())
         {
             return BadRequest("khalie");
+        }
+
+        List<string> images = new List<string>();
+        foreach (var img in NewPost.images)
+        {
+            images.Add(await patherAsync(img));
         }
 
         WorkPost result = new WorkPost
@@ -87,10 +96,11 @@ public class WorkController : Controller
             body = NewPost.body,
             Discription = NewPost.Discription,
             footer = NewPost.footer,
-            images = NewPost.images,
-            mainImg = NewPost.mainImg,
+            images = images,
+            mainImg = await patherAsync(NewPost.mainImg),
             Title = NewPost.Title
         };
+
 
         db.WorkPosts_tbl.Add(result);
         db.SaveChanges();
@@ -106,5 +116,26 @@ public class WorkController : Controller
             db.SaveChanges();
         }
         return Ok("ok shod");
+    }
+
+
+    private async Task<string> patherAsync(IFormFile file)
+    {
+        string FileExtension = Path.GetExtension(file.FileName);
+        var NewFileName = String.Concat(Guid.NewGuid().ToString(), FileExtension);
+        var uploadsDirectory = $"{_env.WebRootPath}/uploads";
+
+        if (!Directory.Exists(uploadsDirectory))
+        {
+            Directory.CreateDirectory(uploadsDirectory);
+        }
+
+        var path = $"{_env.WebRootPath}/uploads/{NewFileName}";
+        var PathSave = $"/uploads/{NewFileName}";
+        using (var stream = new FileStream(path, FileMode.Create))
+        {
+            await file.CopyToAsync(stream);
+        }
+        return PathSave;
     }
 }
