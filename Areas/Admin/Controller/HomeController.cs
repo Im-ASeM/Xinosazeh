@@ -13,6 +13,12 @@ public class HomeController : Controller
     }
 
     [HttpGet]
+    public IActionResult index()
+    {
+        return View();
+    }
+
+    [HttpGet]
     public IActionResult NewWorkCat(NewWorkCat newCat)
     {
         if (newCat.isNullOrEmpty())
