@@ -18,7 +18,7 @@ public class WorkController : Controller
     [HttpGet]
     public IActionResult index(int id = 1)
     {
-        var Posts = db.WorkPosts_tbl.Include(x => x.Categories).ThenInclude(x => x.WorkCat).ToList();
+        var Posts = db.WorkPosts_tbl.Include(x => x.Categories).ThenInclude(x => x.WorkCat).OrderByDescending(x=>x.Id).ToList();
         ViewBag.Posts = Posts;
 
         ViewBag.PageNum = id;

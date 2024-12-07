@@ -1,3 +1,5 @@
+using System.Globalization;
+
 public class Pubdo
 {
     static public string SlideMaker(List<string> images)
@@ -91,5 +93,196 @@ public class Pubdo
             ";
         }
         return result;
+    }
+
+    static public string BlogPostMaker(List<blogPost> posts)
+    {
+        string result = "";
+        foreach (blogPost post in posts)
+        {
+            result += @$"<article id=""post-{post.Id}""
+class=""post-box masonry-post-item post-102 post type-post status-publish format-standard has-post-thumbnail hentry category-interior tag-exterior tag-interior tag-trends"">
+<div class=""post-inner"">
+
+    <div class=""entry-media post-cat-abs"">
+        <a href=""/blogs/details?id={post.Id}"">
+            <img loading=""lazy"" width=""790"" height=""510""
+                src=""{post.mainImg}""
+                class=""attachment-post-thumbnail size-post-thumbnail wp-post-image""
+                alt="""" decoding=""async""
+                srcset=""{post.mainImg} 790w, {post.mainImg} 300w, {post.mainImg} 768w, {post.mainImg} 435w, {post.mainImg} 720w""
+                sizes=""(max-width: 790px) 100vw, 790px""> </a>
+        <div class=""post-cat"">
+            <div class=""posted-in"">
+                {BlogPostKeyWord(post.KeyWords)}
+            </div>
+        </div>
+    </div>
+
+
+    <div class=""inner-post"">
+        <div class=""entry-header"">
+
+            <div class=""entry-meta"">
+                <span class=""posted-on""><a
+                        href=""/blogs/details?id={post.Id}""
+                        rel=""bookmark""><time class=""entry-date published""
+                            datetime=""{PersianDate(post.CreateDate)}"">{PersianDate(post.CreateDate)}</time></a></span><span class=""byline""><a
+                        class=""url fn n"" href=""../author/theratio/index.htm"">مدیر
+                        سایت</a></span><span class=""comment-num""><a
+                        href=""/blogs/details?id={post.Id}#comments"">{post.Comments.Count}
+                        دیدگاه</a></span>
+            </div><!-- .entry-meta -->
+
+            <h4 class=""entry-title""><a class=""title-link""
+                    href=""/blogs/details?id={post.Id}""
+                    rel=""bookmark"">{post.Title}</a>
+            </h4>
+        </div><!-- .entry-header -->
+
+        <div class=""entry-summary the-excerpt"">
+
+            <p>{post.Discription}</p>
+
+        </div><!-- .entry-content -->
+        <div class=""entry-footer"">
+            <a href=""/blogs/details?id={post.Id}""
+                class=""btn-details""> بیشتر بخوانید</a>
+        </div>
+    </div>
+</div>
+</article>";
+        }
+        return result;
+    }
+
+    static public string BlogPostKeyWord(List<string> keys)
+    {
+        string result = "";
+        foreach (string key in keys)
+        {
+            result += @$"<a rel=""category tag"">{key}</a>
+            ";
+        }
+        return result;
+    }
+
+    static public string PersianDate(DateTime date)
+    {
+        PersianCalendar pc = new PersianCalendar();
+        return $"{pc.GetYear(date)}/{pc.GetMonth(date)}/{pc.GetDayOfMonth(date)}";
+    }
+
+    static public string BlogSideNewPosts(List<blogPost> posts)
+    {
+        string result = "";
+        foreach (blogPost post in posts)
+        {
+            result += $@"<li class=""clearfix"">
+<div class=""thumb"">
+    <a href=""/blogs/details?id={post.Id}"">
+        <img loading=""lazy"" width=""150"" height=""150""
+            src=""{post.mainImg}""
+            class=""attachment-thumbnail size-thumbnail wp-post-image"" alt=""""
+            decoding=""async""
+            srcset=""{post.mainImg} 150w, {post.mainImg} 100w""
+            sizes=""(max-width: 150px) 100vw, 150px""> </a>
+</div>
+<div class=""entry-header"">
+    <h6>
+        <a href=""/blogs/details?id={post.Id}"">10
+           {post.Title}</a>
+    </h6>
+    <span class=""post-on"">
+        <span class=""entry-date"">{PersianDate(post.CreateDate)}</span>
+    </span>
+</div>
+</li>";
+        }
+        return result;
+    }
+
+    static public string BlogDetailPicture(List<string> images)
+    {
+        string result = "";
+        foreach (string img in images)
+        {
+            result += $@"<figure class='gallery-item'>
+    <div class='gallery-icon landscape'>
+        <img loading=""lazy"" decoding=""async""
+            width=""421"" height=""360""
+            src=""{img}""
+            class=""attachment-full size-full""
+            alt=""""
+            srcset=""{img} 421w, {img} 300w""
+            sizes=""(max-width: 421px) 100vw, 421px"">
+    </div>
+</figure>"
+;
+        }
+        return result;
+    }
+    static public string BlogDetailFooterPosts(List<blogPost> posts)
+    {
+        string result = "";
+        foreach (blogPost post in posts)
+        {
+            result += @$"<div class=""col-sm-6"">
+<div class=""post-box post-item"">
+    <div class=""post-inner"">
+        <div class=""entry-media post-cat-abs"">
+            <a
+                href=""/blogs/details?id={post.Id}""><img
+                    width=""790"" height=""510""
+                    src=""{post.mainImg}""
+                    class=""attachment-theratio-grid-post-thumbnail size-theratio-grid-post-thumbnail wp-post-image""
+                    alt="""" decoding=""async""
+                    srcset=""{post.mainImg} 790w, {post.mainImg} 300w,{post.mainImg} 768w, {post.mainImg} 435w, {post.mainImg} 720w""
+                    sizes=""(max-width: 790px) 100vw, 790px""></a>
+            <div class=""post-cat"">
+                <div class=""posted-in"">
+                {BlogPostKeyWord(post.KeyWords)}
+                </div>
+            </div>
+        </div>
+        <div class=""inner-post"">
+            <div class=""entry-header"">
+
+                <div class=""entry-meta"">
+                    <span class=""posted-on""><a
+                            href=""/blogs/details?id={post.Id}""
+                            rel=""bookmark""><time
+                                class=""entry-date published""
+                                datetime=""{PersianDate(post.CreateDate)}"">{PersianDate(post.CreateDate)}</time></a></span><span
+                        class=""byline""><span class=""author vcard""><a
+                                class=""url fn n"">مدیر
+                                سایت</a></span></span>
+                </div><!-- .entry-meta -->
+
+                <h5 class=""entry-title""><a class=""title-link""
+                        href=""../use-pastel-colors-natural-materials/index.htm""
+                        rel=""bookmark"">{post.Title}</h5>
+            </div><!-- .entry-header -->
+
+            <div class=""the-excerpt"">
+                {GetShortDescription(post.Discription, 40)}
+            </div><!-- .entry-content -->
+        </div>
+    </div>
+</div>
+</div>";
+        }
+        return result;
+    }
+    public static string GetShortDescription(string description, int maxLength)
+    {
+        if (description.Length > maxLength)
+        {
+            return description.Substring(0, maxLength) + "...";
+        }
+        else
+        {
+            return description;
+        }
     }
 }

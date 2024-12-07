@@ -1,8 +1,8 @@
-@{
+@{{
     Layout=null;
-}
+}}
 
-@Html.Raw(@"<!doctype html>
+@Html.Raw($@"<!doctype html>
 <html dir=""rtl"" lang=""fa-IR"">
 
 <head>
@@ -14,23 +14,23 @@
 	<title>وبلاگ &#8211; Theratio</title>
 	<meta name='robots' content='noindex, nofollow'>
 	<style>
-		img:is([sizes=""auto"" i], [sizes^=""auto,"" i]) {
+		img:is([sizes=""auto"" i], [sizes^=""auto,"" i]) {{
 			contain-intrinsic-size: 3000px 1500px
-		}
+		}}
 	</style>
 	<link rel=""alternate"" type=""application/rss+xml"" title=""Theratio &raquo; خوراک"" href=""../feed/index-1.htm"">
 	<link rel=""alternate"" type=""application/rss+xml"" title=""Theratio &raquo; خوراک دیدگاه‌ها""
 		href=""../comments/feed/index-1.htm"">
 	<script type=""text/javascript"">
 		/* <![CDATA[ */
-		window._wpemojiSettings = { ""baseUrl"": ""https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/"", ""ext"": "".png"", ""svgUrl"": ""https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/"", ""svgExt"": "".svg"", ""source"": { ""concatemoji"": ""https:\/\/theratio.hamsedaweb.ir\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.1"" } };
+		window._wpemojiSettings = {{ ""baseUrl"": ""https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/"", ""ext"": "".png"", ""svgUrl"": ""https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/"", ""svgExt"": "".svg"", ""source"": {{ ""concatemoji"": ""https:\/\/theratio.hamsedaweb.ir\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.1"" }} }};
 		/*! This file is auto-generated */
-		!function (i, n) { var o, s, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === r[t] }) } function u(e, t, n) { switch (t) { case ""flag"": return n(e, ""\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f"", ""\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f"") ? !1 : !n(e, ""\ud83c\uddfa\ud83c\uddf3"", ""\ud83c\uddfa\u200b\ud83c\uddf3"") && !n(e, ""\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f"", ""\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f""); case ""emoji"": return !n(e, ""\ud83d\udc26\u200d\u2b1b"", ""\ud83d\udc26\u200b\u2b1b"") }return !1 } function f(e, t, n) { var r = ""undefined"" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement(""canvas""), a = r.getContext(""2d"", { willReadFrequently: !0 }), o = (a.textBaseline = ""top"", a.font = ""600 32px Arial"", {}); return e.forEach(function (e) { o[e] = t(a, e, n) }), o } function t(e) { var t = i.createElement(""script""); t.src = e, t.defer = !0, i.head.appendChild(t) } ""undefined"" != typeof Promise && (o = ""wpEmojiSettingsSupports"", s = [""flag"", ""emoji""], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { i.addEventListener(""DOMContentLoaded"", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if (""object"" == typeof e && ""number"" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && ""object"" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if (""undefined"" != typeof Worker && ""undefined"" != typeof OffscreenCanvas && ""undefined"" != typeof URL && URL.createObjectURL && ""undefined"" != typeof Blob) try { var e = ""postMessage("" + f.toString() + ""("" + [JSON.stringify(s), u.toString(), p.toString()].join("","") + ""));"", r = new Blob([e], { type: ""text/javascript"" }), a = new Worker(URL.createObjectURL(r), { name: ""wpTestEmojiSupports"" }); return void (a.onmessage = function (e) { c(n = e.data), a.terminate(), t(n) }) } catch (e) { } c(n = f(s, u, p)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], ""flag"" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);
+		!function (i, n) {{ var o, s, e; function c(e) {{ try {{ var t = {{ supportTests: e, timestamp: (new Date).valueOf() }}; sessionStorage.setItem(o, JSON.stringify(t)) }} catch (e) {{ }} }} function p(e, t, n) {{ e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) {{ return e === r[t] }}) }} function u(e, t, n) {{ switch (t) {{ case ""flag"": return n(e, ""\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f"", ""\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f"") ? !1 : !n(e, ""\ud83c\uddfa\ud83c\uddf3"", ""\ud83c\uddfa\u200b\ud83c\uddf3"") && !n(e, ""\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f"", ""\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f""); case ""emoji"": return !n(e, ""\ud83d\udc26\u200d\u2b1b"", ""\ud83d\udc26\u200b\u2b1b"") }}return !1 }} function f(e, t, n) {{ var r = ""undefined"" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement(""canvas""), a = r.getContext(""2d"", {{ willReadFrequently: !0 }}), o = (a.textBaseline = ""top"", a.font = ""600 32px Arial"", {{}}); return e.forEach(function (e) {{ o[e] = t(a, e, n) }}), o }} function t(e) {{ var t = i.createElement(""script""); t.src = e, t.defer = !0, i.head.appendChild(t) }} ""undefined"" != typeof Promise && (o = ""wpEmojiSettingsSupports"", s = [""flag"", ""emoji""], n.supports = {{ everything: !0, everythingExceptFlag: !0 }}, e = new Promise(function (e) {{ i.addEventListener(""DOMContentLoaded"", e, {{ once: !0 }}) }}), new Promise(function (t) {{ var n = function () {{ try {{ var e = JSON.parse(sessionStorage.getItem(o)); if (""object"" == typeof e && ""number"" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && ""object"" == typeof e.supportTests) return e.supportTests }} catch (e) {{ }} return null }}(); if (!n) {{ if (""undefined"" != typeof Worker && ""undefined"" != typeof OffscreenCanvas && ""undefined"" != typeof URL && URL.createObjectURL && ""undefined"" != typeof Blob) try {{ var e = ""postMessage("" + f.toString() + ""("" + [JSON.stringify(s), u.toString(), p.toString()].join("","") + ""));"", r = new Blob([e], {{ type: ""text/javascript"" }}), a = new Worker(URL.createObjectURL(r), {{ name: ""wpTestEmojiSupports"" }}); return void (a.onmessage = function (e) {{ c(n = e.data), a.terminate(), t(n) }}) }} catch (e) {{ }} c(n = f(s, u, p)) }} t(n) }}).then(function (e) {{ for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], ""flag"" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () {{ n.DOMReady = !0 }} }}).then(function () {{ return e }}).then(function () {{ var e; n.supports.everything || (n.readyCallback(), (e = n.source || {{}}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) }})) }}((window, document), window._wpemojiSettings);
 		/* ]]> */
 	</script>
 	<style id='wp-emoji-styles-inline-css' type='text/css'>
 		img.wp-smiley,
-		img.emoji {
+		img.emoji {{
 			display: inline !important;
 			border: none !important;
 			box-shadow: none !important;
@@ -40,11 +40,11 @@
 			vertical-align: -0.1em !important;
 			background: none !important;
 			padding: 0 !important;
-		}
+		}}
 	</style>
 	<style id='classic-theme-styles-inline-css' type='text/css'>
 		/*! This file is auto-generated */
-		.wp-block-button__link {
+		.wp-block-button__link {{
 			color: #fff;
 			background-color: #32373c;
 			border-radius: 9999px;
@@ -52,16 +52,16 @@
 			text-decoration: none;
 			padding: calc(.667em + 2px) calc(1.333em + 2px);
 			font-size: 1.125em
-		}
+		}}
 
-		.wp-block-file__button {
+		.wp-block-file__button {{
 			background: #32373c;
 			color: #fff;
 			text-decoration: none
-		}
+		}}
 	</style>
 	<style id='global-styles-inline-css' type='text/css'>
-		:root {
+		:root {{
 			--wp--preset--aspect-ratio--square: 1;
 			--wp--preset--aspect-ratio--4-3: 4/3;
 			--wp--preset--aspect-ratio--3-4: 3/4;
@@ -111,281 +111,281 @@
 			--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
 			--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
 			--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
-		}
+		}}
 
-		:where(.is-layout-flex) {
+		:where(.is-layout-flex) {{
 			gap: 0.5em;
-		}
+		}}
 
-		:where(.is-layout-grid) {
+		:where(.is-layout-grid) {{
 			gap: 0.5em;
-		}
+		}}
 
-		body .is-layout-flex {
+		body .is-layout-flex {{
 			display: flex;
-		}
+		}}
 
-		.is-layout-flex {
+		.is-layout-flex {{
 			flex-wrap: wrap;
 			align-items: center;
-		}
+		}}
 
-		.is-layout-flex> :is(*, div) {
+		.is-layout-flex> :is(*, div) {{
 			margin: 0;
-		}
+		}}
 
-		body .is-layout-grid {
+		body .is-layout-grid {{
 			display: grid;
-		}
+		}}
 
-		.is-layout-grid> :is(*, div) {
+		.is-layout-grid> :is(*, div) {{
 			margin: 0;
-		}
+		}}
 
-		:where(.wp-block-columns.is-layout-flex) {
+		:where(.wp-block-columns.is-layout-flex) {{
 			gap: 2em;
-		}
+		}}
 
-		:where(.wp-block-columns.is-layout-grid) {
+		:where(.wp-block-columns.is-layout-grid) {{
 			gap: 2em;
-		}
+		}}
 
-		:where(.wp-block-post-template.is-layout-flex) {
+		:where(.wp-block-post-template.is-layout-flex) {{
 			gap: 1.25em;
-		}
+		}}
 
-		:where(.wp-block-post-template.is-layout-grid) {
+		:where(.wp-block-post-template.is-layout-grid) {{
 			gap: 1.25em;
-		}
+		}}
 
-		.has-black-color {
+		.has-black-color {{
 			color: var(--wp--preset--color--black) !important;
-		}
+		}}
 
-		.has-cyan-bluish-gray-color {
+		.has-cyan-bluish-gray-color {{
 			color: var(--wp--preset--color--cyan-bluish-gray) !important;
-		}
+		}}
 
-		.has-white-color {
+		.has-white-color {{
 			color: var(--wp--preset--color--white) !important;
-		}
+		}}
 
-		.has-pale-pink-color {
+		.has-pale-pink-color {{
 			color: var(--wp--preset--color--pale-pink) !important;
-		}
+		}}
 
-		.has-vivid-red-color {
+		.has-vivid-red-color {{
 			color: var(--wp--preset--color--vivid-red) !important;
-		}
+		}}
 
-		.has-luminous-vivid-orange-color {
+		.has-luminous-vivid-orange-color {{
 			color: var(--wp--preset--color--luminous-vivid-orange) !important;
-		}
+		}}
 
-		.has-luminous-vivid-amber-color {
+		.has-luminous-vivid-amber-color {{
 			color: var(--wp--preset--color--luminous-vivid-amber) !important;
-		}
+		}}
 
-		.has-light-green-cyan-color {
+		.has-light-green-cyan-color {{
 			color: var(--wp--preset--color--light-green-cyan) !important;
-		}
+		}}
 
-		.has-vivid-green-cyan-color {
+		.has-vivid-green-cyan-color {{
 			color: var(--wp--preset--color--vivid-green-cyan) !important;
-		}
+		}}
 
-		.has-pale-cyan-blue-color {
+		.has-pale-cyan-blue-color {{
 			color: var(--wp--preset--color--pale-cyan-blue) !important;
-		}
+		}}
 
-		.has-vivid-cyan-blue-color {
+		.has-vivid-cyan-blue-color {{
 			color: var(--wp--preset--color--vivid-cyan-blue) !important;
-		}
+		}}
 
-		.has-vivid-purple-color {
+		.has-vivid-purple-color {{
 			color: var(--wp--preset--color--vivid-purple) !important;
-		}
+		}}
 
-		.has-black-background-color {
+		.has-black-background-color {{
 			background-color: var(--wp--preset--color--black) !important;
-		}
+		}}
 
-		.has-cyan-bluish-gray-background-color {
+		.has-cyan-bluish-gray-background-color {{
 			background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
-		}
+		}}
 
-		.has-white-background-color {
+		.has-white-background-color {{
 			background-color: var(--wp--preset--color--white) !important;
-		}
+		}}
 
-		.has-pale-pink-background-color {
+		.has-pale-pink-background-color {{
 			background-color: var(--wp--preset--color--pale-pink) !important;
-		}
+		}}
 
-		.has-vivid-red-background-color {
+		.has-vivid-red-background-color {{
 			background-color: var(--wp--preset--color--vivid-red) !important;
-		}
+		}}
 
-		.has-luminous-vivid-orange-background-color {
+		.has-luminous-vivid-orange-background-color {{
 			background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
-		}
+		}}
 
-		.has-luminous-vivid-amber-background-color {
+		.has-luminous-vivid-amber-background-color {{
 			background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
-		}
+		}}
 
-		.has-light-green-cyan-background-color {
+		.has-light-green-cyan-background-color {{
 			background-color: var(--wp--preset--color--light-green-cyan) !important;
-		}
+		}}
 
-		.has-vivid-green-cyan-background-color {
+		.has-vivid-green-cyan-background-color {{
 			background-color: var(--wp--preset--color--vivid-green-cyan) !important;
-		}
+		}}
 
-		.has-pale-cyan-blue-background-color {
+		.has-pale-cyan-blue-background-color {{
 			background-color: var(--wp--preset--color--pale-cyan-blue) !important;
-		}
+		}}
 
-		.has-vivid-cyan-blue-background-color {
+		.has-vivid-cyan-blue-background-color {{
 			background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
-		}
+		}}
 
-		.has-vivid-purple-background-color {
+		.has-vivid-purple-background-color {{
 			background-color: var(--wp--preset--color--vivid-purple) !important;
-		}
+		}}
 
-		.has-black-border-color {
+		.has-black-border-color {{
 			border-color: var(--wp--preset--color--black) !important;
-		}
+		}}
 
-		.has-cyan-bluish-gray-border-color {
+		.has-cyan-bluish-gray-border-color {{
 			border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
-		}
+		}}
 
-		.has-white-border-color {
+		.has-white-border-color {{
 			border-color: var(--wp--preset--color--white) !important;
-		}
+		}}
 
-		.has-pale-pink-border-color {
+		.has-pale-pink-border-color {{
 			border-color: var(--wp--preset--color--pale-pink) !important;
-		}
+		}}
 
-		.has-vivid-red-border-color {
+		.has-vivid-red-border-color {{
 			border-color: var(--wp--preset--color--vivid-red) !important;
-		}
+		}}
 
-		.has-luminous-vivid-orange-border-color {
+		.has-luminous-vivid-orange-border-color {{
 			border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
-		}
+		}}
 
-		.has-luminous-vivid-amber-border-color {
+		.has-luminous-vivid-amber-border-color {{
 			border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
-		}
+		}}
 
-		.has-light-green-cyan-border-color {
+		.has-light-green-cyan-border-color {{
 			border-color: var(--wp--preset--color--light-green-cyan) !important;
-		}
+		}}
 
-		.has-vivid-green-cyan-border-color {
+		.has-vivid-green-cyan-border-color {{
 			border-color: var(--wp--preset--color--vivid-green-cyan) !important;
-		}
+		}}
 
-		.has-pale-cyan-blue-border-color {
+		.has-pale-cyan-blue-border-color {{
 			border-color: var(--wp--preset--color--pale-cyan-blue) !important;
-		}
+		}}
 
-		.has-vivid-cyan-blue-border-color {
+		.has-vivid-cyan-blue-border-color {{
 			border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
-		}
+		}}
 
-		.has-vivid-purple-border-color {
+		.has-vivid-purple-border-color {{
 			border-color: var(--wp--preset--color--vivid-purple) !important;
-		}
+		}}
 
-		.has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+		.has-vivid-cyan-blue-to-vivid-purple-gradient-background {{
 			background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
-		}
+		}}
 
-		.has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+		.has-light-green-cyan-to-vivid-green-cyan-gradient-background {{
 			background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
-		}
+		}}
 
-		.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+		.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {{
 			background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
-		}
+		}}
 
-		.has-luminous-vivid-orange-to-vivid-red-gradient-background {
+		.has-luminous-vivid-orange-to-vivid-red-gradient-background {{
 			background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
-		}
+		}}
 
-		.has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+		.has-very-light-gray-to-cyan-bluish-gray-gradient-background {{
 			background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
-		}
+		}}
 
-		.has-cool-to-warm-spectrum-gradient-background {
+		.has-cool-to-warm-spectrum-gradient-background {{
 			background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
-		}
+		}}
 
-		.has-blush-light-purple-gradient-background {
+		.has-blush-light-purple-gradient-background {{
 			background: var(--wp--preset--gradient--blush-light-purple) !important;
-		}
+		}}
 
-		.has-blush-bordeaux-gradient-background {
+		.has-blush-bordeaux-gradient-background {{
 			background: var(--wp--preset--gradient--blush-bordeaux) !important;
-		}
+		}}
 
-		.has-luminous-dusk-gradient-background {
+		.has-luminous-dusk-gradient-background {{
 			background: var(--wp--preset--gradient--luminous-dusk) !important;
-		}
+		}}
 
-		.has-pale-ocean-gradient-background {
+		.has-pale-ocean-gradient-background {{
 			background: var(--wp--preset--gradient--pale-ocean) !important;
-		}
+		}}
 
-		.has-electric-grass-gradient-background {
+		.has-electric-grass-gradient-background {{
 			background: var(--wp--preset--gradient--electric-grass) !important;
-		}
+		}}
 
-		.has-midnight-gradient-background {
+		.has-midnight-gradient-background {{
 			background: var(--wp--preset--gradient--midnight) !important;
-		}
+		}}
 
-		.has-small-font-size {
+		.has-small-font-size {{
 			font-size: var(--wp--preset--font-size--small) !important;
-		}
+		}}
 
-		.has-medium-font-size {
+		.has-medium-font-size {{
 			font-size: var(--wp--preset--font-size--medium) !important;
-		}
+		}}
 
-		.has-large-font-size {
+		.has-large-font-size {{
 			font-size: var(--wp--preset--font-size--large) !important;
-		}
+		}}
 
-		.has-x-large-font-size {
+		.has-x-large-font-size {{
 			font-size: var(--wp--preset--font-size--x-large) !important;
-		}
+		}}
 
-		:where(.wp-block-post-template.is-layout-flex) {
+		:where(.wp-block-post-template.is-layout-flex) {{
 			gap: 1.25em;
-		}
+		}}
 
-		:where(.wp-block-post-template.is-layout-grid) {
+		:where(.wp-block-post-template.is-layout-grid) {{
 			gap: 1.25em;
-		}
+		}}
 
-		:where(.wp-block-columns.is-layout-flex) {
+		:where(.wp-block-columns.is-layout-flex) {{
 			gap: 2em;
-		}
+		}}
 
-		:where(.wp-block-columns.is-layout-grid) {
+		:where(.wp-block-columns.is-layout-grid) {{
 			gap: 2em;
-		}
+		}}
 
-		:root :where(.wp-block-pullquote) {
+		:root :where(.wp-block-pullquote) {{
 			font-size: 1.5em;
 			line-height: 1.6;
-		}
+		}}
 	</style>
 	<link rel='stylesheet' id='contact-form-7-css'
 		href='../wp-content/plugins/contact-form-7/includes/css/styles-2.css?ver=5.9.8' type='text/css' media='all'>
@@ -400,9 +400,9 @@
 	<link rel='stylesheet' id='woocommerce-general-rtl-css'
 		href='../wp-content/plugins/woocommerce/assets/css/woocommerce-rtl-2.css?ver=9.3.3' type='text/css' media='all'>
 	<style id='woocommerce-inline-inline-css' type='text/css'>
-		.woocommerce form .form-row .required {
+		.woocommerce form .form-row .required {{
 			visibility: visible;
-		}
+		}}
 	</style>
 	<link rel='stylesheet' id='bootstrap-css' href='../wp-content/themes/theratio/css/bootstrap-2.css?ver=4.0'
 		type='text/css' media='all'>
@@ -427,7 +427,7 @@
 		id=""jquery-migrate-js""></script>
 	<script type=""text/javascript"" id=""theratio_scripts-js-extra"">
 		/* <![CDATA[ */
-		var theratio_loadmore_params = { ""ajaxurl"": ""https:\/\/theratio.hamsedaweb.ir\/wp-admin\/admin-ajax.php"" };
+		var theratio_loadmore_params = {{ ""ajaxurl"": ""https:\/\/theratio.hamsedaweb.ir\/wp-admin\/admin-ajax.php"" }};
 		/* ]]> */
 	</script>
 	<script type=""text/javascript"" src=""../wp-content/themes/theratio/js/myloadmore-63.js?ver=1733072336""
@@ -437,7 +437,7 @@
 		id=""jquery-blockui-js"" defer=""defer"" data-wp-strategy=""defer""></script>
 	<script type=""text/javascript"" id=""wc-add-to-cart-js-extra"">
 		/* <![CDATA[ */
-		var wc_add_to_cart_params = { ""ajax_url"": ""\/wp-admin\/admin-ajax.php"", ""wc_ajax_url"": ""\/?wc-ajax=%%endpoint%%"", ""i18n_view_cart"": ""\u0645\u0634\u0627\u0647\u062f\u0647 \u0633\u0628\u062f \u062e\u0631\u06cc\u062f"", ""cart_url"": ""https:\/\/theratio.hamsedaweb.ir\/cart\/"", ""is_cart"": """", ""cart_redirect_after_add"": ""no"" };
+		var wc_add_to_cart_params = {{ ""ajax_url"": ""\/wp-admin\/admin-ajax.php"", ""wc_ajax_url"": ""\/?wc-ajax=%%endpoint%%"", ""i18n_view_cart"": ""\u0645\u0634\u0627\u0647\u062f\u0647 \u0633\u0628\u062f \u062e\u0631\u06cc\u062f"", ""cart_url"": ""https:\/\/theratio.hamsedaweb.ir\/cart\/"", ""is_cart"": """", ""cart_redirect_after_add"": ""no"" }};
 		/* ]]> */
 	</script>
 	<script type=""text/javascript""
@@ -448,7 +448,7 @@
 		id=""js-cookie-js"" defer=""defer"" data-wp-strategy=""defer""></script>
 	<script type=""text/javascript"" id=""woocommerce-js-extra"">
 		/* <![CDATA[ */
-		var woocommerce_params = { ""ajax_url"": ""\/wp-admin\/admin-ajax.php"", ""wc_ajax_url"": ""\/?wc-ajax=%%endpoint%%"" };
+		var woocommerce_params = {{ ""ajax_url"": ""\/wp-admin\/admin-ajax.php"", ""wc_ajax_url"": ""\/?wc-ajax=%%endpoint%%"" }};
 		/* ]]> */
 	</script>
 	<script type=""text/javascript""
@@ -538,9 +538,9 @@
 		.woocommerce #respond input#submit.alt,
 		.woocommerce a.button.alt,
 		.woocommerce button.button.alt,
-		.woocommerce input.button.alt {
+		.woocommerce input.button.alt {{
 			font-family: inherit;
-		}
+		}}
 
 		blockquote cite,
 		.page-header .breadcrumbs li:before,
@@ -554,70 +554,70 @@
 		.ot-counter span,
 		.team-wrap .m_extra,
 		.projects-grid .projects-box .portfolio-info .portfolio-cates,
-		.woocommerce .woocommerce-Price-amount {
+		.woocommerce .woocommerce-Price-amount {{
 			font-family: inherit;
-		}
+		}}
 	</style> <noscript>
 		<style>
-			.woocommerce-product-gallery {
+			.woocommerce-product-gallery {{
 				opacity: 1 !important;
-			}
+			}}
 		</style>
 	</noscript>
 	<meta name=""generator""
 		content=""Elementor 3.24.4; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto"">
 	<style>
 		.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
-		.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+		.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {{
 			background-image: none !important;
-		}
+		}}
 
-		@media screen and (max-height: 1024px) {
+		@media screen and (max-height: 1024px) {{
 
 			.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
-			.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+			.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {{
 				background-image: none !important;
-			}
-		}
+			}}
+		}}
 
-		@media screen and (max-height: 640px) {
+		@media screen and (max-height: 640px) {{
 
 			.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
-			.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+			.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {{
 				background-image: none !important;
-			}
-		}
+			}}
+		}}
 	</style>
 	<meta name=""generator""
 		content=""Powered by Slider Revolution 6.7.19 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface."">
 	<style class='wp-fonts-local' type='text/css'>
-		@font-face {
+		@font-face {{
 			font-family: Inter;
 			font-style: normal;
 			font-weight: 300 900;
 			font-display: fallback;
 			src: url('../wp-content/plugins/woocommerce/assets/fonts/Inter-VariableFont_slnt,wght-2.woff2') format('woff2');
 			font-stretch: normal;
-		}
+		}}
 
-		@font-face {
+		@font-face {{
 			font-family: Cardo;
 			font-style: normal;
 			font-weight: 400;
 			font-display: fallback;
 			src: url('../wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400-2.woff2') format('woff2');
-		}
+		}}
 	</style>
 	<link rel=""icon"" href=""../wp-content/uploads/2020/07/favicon-5-1.png"" sizes=""32x32"">
 	<link rel=""icon"" href=""../wp-content/uploads/2020/07/favicon-5-1.png"" sizes=""192x192"">
 	<link rel=""apple-touch-icon"" href=""../wp-content/uploads/2020/07/favicon-5-1.png"">
 	<meta name=""msapplication-TileImage""
 		content=""https://theratio.hamsedaweb.ir/wp-content/uploads/2020/07/favicon-5.png"">
-	<script>function setREVStartSize(e) {
-			//window.requestAnimationFrame(function() {
+	<script>function setREVStartSize(e) {{
+			//window.requestAnimationFrame(function() {{
 			window.RSIW = window.RSIW === undefined ? window.innerWidth : window.RSIW;
 			window.RSIH = window.RSIH === undefined ? window.innerHeight : window.RSIH;
-			try {
+			try {{
 				var pw = document.getElementById(e.c).parentNode.offsetWidth,
 					newh;
 				pw = pw === 0 || isNaN(pw) || (e.l == ""fullwidth"" || e.layout == ""fullwidth"") ? window.RSIW : pw;
@@ -630,7 +630,7 @@
 				e.mh = e.mh === undefined || e.mh == """" || e.mh === ""auto"" ? 0 : parseInt(e.mh, 0);
 				if (e.layout === ""fullscreen"" || e.l === ""fullscreen"")
 					newh = Math.max(e.mh, window.RSIH);
-				else {
+				else {{
 					e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
 					for (var i in e.rl) if (e.gw[i] === undefined || e.gw[i] === 0) e.gw[i] = e.gw[i - 1];
 					e.gh = e.el === undefined || e.el === """" || (Array.isArray(e.el) && e.el.length == 0) ? e.gh : e.el;
@@ -646,184 +646,184 @@
 					e.thumbh = e.thumbhide >= pw ? 0 : e.thumbh;
 					for (var i in e.rl) nl[i] = e.rl[i] < window.RSIW ? 0 : e.rl[i];
 					sl = nl[0];
-					for (var i in nl) if (sl > nl[i] && nl[i] > 0) { sl = nl[i]; ix = i; }
+					for (var i in nl) if (sl > nl[i] && nl[i] > 0) {{ sl = nl[i]; ix = i; }}
 					var m = pw > (e.gw[ix] + e.tabw + e.thumbw) ? 1 : (pw - (e.tabw + e.thumbw)) / (e.gw[ix]);
 					newh = (e.gh[ix] * m) + (e.tabh + e.thumbh);
-				}
+				}}
 				var el = document.getElementById(e.c);
 				if (el !== null && el) el.style.height = newh + ""px"";
 				el = document.getElementById(e.c + ""_wrapper"");
-				if (el !== null && el) {
+				if (el !== null && el) {{
 					el.style.height = newh + ""px"";
 					el.style.display = ""block"";
-				}
-			} catch (e) {
+				}}
+			}} catch (e) {{
 				console.log(""Failure at Presize of Slider:"" + e)
-			}
-			//});
-		};</script>
+			}}
+			//}});
+		}};</script>
 	<style type=""text/css"" id=""wp-custom-css"">
-		@media screen and (max-width: 782px) {
-			html {
+		@media screen and (max-width: 782px) {{
+			html {{
 				margin-top: 0 !important;
-			}
-		}
+			}}
+		}}
 	</style>
 	<style id=""kirki-inline-styles"">
-		.page-header {
+		.page-header {{
 			background-image: url(""../wp-content/uploads/2020/05/bg-shop-2.jpg"");
-		}
+		}}
 
 		body,
 		.elementor-element .elementor-widget-text-editor,
-		.elementor-element .elementor-widget-icon-list .elementor-icon-list-item {
+		.elementor-element .elementor-widget-icon-list .elementor-icon-list-item {{
 			font-family: inherit;
-		}
+		}}
 
 		h1,
-		.elementor-widget.elementor-widget-heading h1.elementor-heading-title {
+		.elementor-widget.elementor-widget-heading h1.elementor-heading-title {{
 			font-family: inherit;
-		}
+		}}
 
 		h2,
-		.elementor-widget.elementor-widget-heading h2.elementor-heading-title {
+		.elementor-widget.elementor-widget-heading h2.elementor-heading-title {{
 			font-family: inherit;
-		}
+		}}
 
 		h3,
-		.elementor-widget.elementor-widget-heading h3.elementor-heading-title {
+		.elementor-widget.elementor-widget-heading h3.elementor-heading-title {{
 			font-family: inherit;
-		}
+		}}
 
 		h4,
-		.elementor-widget.elementor-widget-heading h4.elementor-heading-title {
+		.elementor-widget.elementor-widget-heading h4.elementor-heading-title {{
 			font-family: inherit;
-		}
+		}}
 
 		h5,
-		.elementor-widget.elementor-widget-heading h5.elementor-heading-title {
+		.elementor-widget.elementor-widget-heading h5.elementor-heading-title {{
 			font-family: inherit;
-		}
+		}}
 
 		h6,
-		.elementor-widget.elementor-widget-heading h6.elementor-heading-title {
+		.elementor-widget.elementor-widget-heading h6.elementor-heading-title {{
 			font-family: inherit;
-		}
+		}}
 
-		body.royal_preloader {
+		body.royal_preloader {{
 			color: #1a1a1a;
-		}
+		}}
 
-		#royal_preloader.royal_preloader_progress .royal_preloader_meter {
+		#royal_preloader.royal_preloader_progress .royal_preloader_meter {{
 			background-color: #9f9e9e;
-		}
+		}}
 
 		#royal_preloader.royal_preloader_progress .royal_preloader_percentage,
 		#royal_preloader.royal_preloader_logo .royal_preloader_percentage,
-		#royal_preloader.royal_preloader_scale_text .royal_preloader_loader {
+		#royal_preloader.royal_preloader_scale_text .royal_preloader_loader {{
 			font-family: Josefin Sans;
 			font-size: 20px;
 			font-weight: 400;
 			letter-spacing: 0px;
 			line-height: 40px;
 			color: #9f9e9e;
-		}
+		}}
 
-		@media (max-width: 767px) {}
+		@media (max-width: 767px) {{}}
 
-		@media (min-width: 768px) and (max-width: 1024px) {}
+		@media (min-width: 768px) and (max-width: 1024px) {{}}
 
-		@media (min-width: 1024px) {}
+		@media (min-width: 1024px) {{}}
 
 		/* vietnamese */
-		@font-face {
+		@font-face {{
 			font-family: 'Josefin Sans';
 			font-style: normal;
 			font-weight: 400;
 			font-display: swap;
 			src: url(../wp-content/fonts/josefin-sans/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_DjQbMlhLzTs-2.woff2) format('woff2');
 			unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-		}
+		}}
 
 		/* latin-ext */
-		@font-face {
+		@font-face {{
 			font-family: 'Josefin Sans';
 			font-style: normal;
 			font-weight: 400;
 			font-display: swap;
 			src: url(../wp-content/fonts/josefin-sans/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_DjQbMhhLzTs-2.woff2) format('woff2');
 			unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-		}
+		}}
 
 		/* latin */
-		@font-face {
+		@font-face {{
 			font-family: 'Josefin Sans';
 			font-style: normal;
 			font-weight: 400;
 			font-display: swap;
 			src: url(../wp-content/fonts/josefin-sans/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_DjQbMZhLw-2.woff2) format('woff2');
 			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-		}
+		}}
 
 		/* vietnamese */
-		@font-face {
+		@font-face {{
 			font-family: 'Josefin Sans';
 			font-style: normal;
 			font-weight: 400;
 			font-display: swap;
 			src: url(../wp-content/fonts/josefin-sans/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_DjQbMlhLzTs-2.woff2) format('woff2');
 			unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-		}
+		}}
 
 		/* latin-ext */
-		@font-face {
+		@font-face {{
 			font-family: 'Josefin Sans';
 			font-style: normal;
 			font-weight: 400;
 			font-display: swap;
 			src: url(../wp-content/fonts/josefin-sans/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_DjQbMhhLzTs-2.woff2) format('woff2');
 			unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-		}
+		}}
 
 		/* latin */
-		@font-face {
+		@font-face {{
 			font-family: 'Josefin Sans';
 			font-style: normal;
 			font-weight: 400;
 			font-display: swap;
 			src: url(../wp-content/fonts/josefin-sans/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_DjQbMZhLw-2.woff2) format('woff2');
 			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-		}
+		}}
 
 		/* vietnamese */
-		@font-face {
+		@font-face {{
 			font-family: 'Josefin Sans';
 			font-style: normal;
 			font-weight: 400;
 			font-display: swap;
 			src: url(../wp-content/fonts/josefin-sans/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_DjQbMlhLzTs-2.woff2) format('woff2');
 			unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-		}
+		}}
 
 		/* latin-ext */
-		@font-face {
+		@font-face {{
 			font-family: 'Josefin Sans';
 			font-style: normal;
 			font-weight: 400;
 			font-display: swap;
 			src: url(../wp-content/fonts/josefin-sans/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_DjQbMhhLzTs-2.woff2) format('woff2');
 			unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-		}
+		}}
 
 		/* latin */
-		@font-face {
+		@font-face {{
 			font-family: 'Josefin Sans';
 			font-style: normal;
 			font-weight: 400;
 			font-display: swap;
 			src: url(../wp-content/fonts/josefin-sans/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_DjQbMZhLw-2.woff2) format('woff2');
 			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-		}
+		}}
 	</style>
 </head>
 
@@ -844,7 +844,7 @@
 					<section
 						class=""elementor-section elementor-top-section elementor-element elementor-element-1e72f5b is-fixed elementor-section-full_width elementor-section-height-default elementor-section-height-default""
 						data-id=""1e72f5b"" data-element_type=""section""
-						data-settings=""{&quot;background_background&quot;:&quot;classic&quot;}"">
+						data-settings=""{{&quot;background_background&quot;:&quot;classic&quot;}}"">
 						<div class=""elementor-container elementor-column-gap-no"">
 							<div class=""elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-870e27c ot-flex-column-vertical""
 								data-id=""870e27c"" data-element_type=""column"">
@@ -962,7 +962,7 @@
 					<section
 						class=""elementor-section elementor-top-section elementor-element elementor-element-04a6a8c elementor-section-full_width is-fixed elementor-section-height-default elementor-section-height-default""
 						data-id=""04a6a8c"" data-element_type=""section""
-						data-settings=""{&quot;background_background&quot;:&quot;classic&quot;}"">
+						data-settings=""{{&quot;background_background&quot;:&quot;classic&quot;}}"">
 						<div class=""elementor-container elementor-column-gap-no"">
 							<div class=""elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-3a762e9 ot-flex-column-vertical""
 								data-id=""3a762e9"" data-element_type=""column"">
@@ -1074,7 +1074,7 @@
 					<section
 						class=""elementor-section elementor-top-section elementor-element elementor-element-c1c1f2c elementor-section-boxed elementor-section-height-default elementor-section-height-default""
 						data-id=""c1c1f2c"" data-element_type=""section""
-						data-settings=""{&quot;background_background&quot;:&quot;classic&quot;}"">
+						data-settings=""{{&quot;background_background&quot;:&quot;classic&quot;}}"">
 						<div class=""elementor-container elementor-column-gap-default"">
 							<div class=""elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-af11f96 ot-flex-column-vertical""
 								data-id=""af11f96"" data-element_type=""column"">
@@ -1389,219 +1389,9 @@
 					<div class=""row"">
 						<div id=""primary"" class=""content-area col-lg-9 col-md-9 col-sm-12 col-xs-12"">
 							<main id=""main"" class=""site-main blog-list"">
+							
+								{Pubdo.BlogPostMaker(ViewBag.blogs)}
 
-
-								<article id=""post-102""
-									class=""post-box masonry-post-item post-102 post type-post status-publish format-standard has-post-thumbnail hentry category-interior tag-exterior tag-interior tag-trends"">
-									<div class=""post-inner"">
-
-										<div class=""entry-media post-cat-abs"">
-											<a href=""/blogs/details?id=1"">
-												<img loading=""lazy"" width=""790"" height=""510""
-													src=""../wp-content/uploads/2020/03/post8-3.jpg""
-													class=""attachment-post-thumbnail size-post-thumbnail wp-post-image""
-													alt="""" decoding=""async""
-													srcset=""../wp-content/uploads/2020/03/post8-3.jpg 790w, ../wp-content/uploads/2020/03/post8-3-300x194.jpg 300w, ../wp-content/uploads/2020/03/post8-3-768x496.jpg 768w, ../wp-content/uploads/2020/03/post8-3-435x281.jpg 435w, ../wp-content/uploads/2020/03/post8-3-720x465.jpg 720w""
-													sizes=""(max-width: 790px) 100vw, 790px""> </a>
-											<div class=""post-cat"">
-												<div class=""posted-in""><a href=""../category/interior/index.htm""
-														rel=""category tag"">داخلی</a></div>
-											</div>
-										</div>
-
-
-										<div class=""inner-post"">
-											<div class=""entry-header"">
-
-												<div class=""entry-meta"">
-													<span class=""posted-on""><a
-															href=""/blogs/details?id=1""
-															rel=""bookmark""><time class=""entry-date published""
-																datetime=""1399-01-01\03:27:18"">1 فروردین
-																1399</time></a></span><span class=""byline""><a
-															class=""url fn n"" href=""../author/theratio/index.htm"">مدیر
-															سایت</a></span><span class=""comment-num""><a
-															href=""/blogs/details?id=1#comments"">2
-															دیدگاه</a></span>
-												</div><!-- .entry-meta -->
-
-												<h4 class=""entry-title""><a class=""title-link""
-														href=""/blogs/details?id=1""
-														rel=""bookmark"">10 نکته برتر برای طراحی داخلی آشپزخانه شما</a>
-												</h4>
-											</div><!-- .entry-header -->
-
-											<div class=""entry-summary the-excerpt"">
-
-												<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-													استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
-													ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
-													کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
-
-											</div><!-- .entry-content -->
-											<div class=""entry-footer"">
-												<a href=""/blogs/details?id=1""
-													class=""btn-details""> بیشتر بخوانید</a>
-											</div>
-										</div>
-									</div>
-								</article>
-								<article id=""post-99""
-									class=""post-box masonry-post-item post-99 post type-post status-publish format-standard has-post-thumbnail hentry category-achitecture tag-house tag-building"">
-									<div class=""post-inner"">
-
-										<div class=""entry-media post-cat-abs"">
-											<a href=""/blogs/details?id=1"">
-												<img loading=""lazy"" width=""790"" height=""510""
-													src=""../wp-content/uploads/2020/03/post9-3.jpg""
-													class=""attachment-post-thumbnail size-post-thumbnail wp-post-image""
-													alt="""" decoding=""async""
-													srcset=""../wp-content/uploads/2020/03/post9-3.jpg 790w, ../wp-content/uploads/2020/03/post9-3-300x194.jpg 300w, ../wp-content/uploads/2020/03/post9-3-768x496.jpg 768w, ../wp-content/uploads/2020/03/post9-3-435x281.jpg 435w, ../wp-content/uploads/2020/03/post9-3-720x465.jpg 720w""
-													sizes=""(max-width: 790px) 100vw, 790px""> </a>
-											<div class=""post-cat"">
-												<div class=""posted-in""><a href=""../category/achitecture/index.htm""
-														rel=""category tag"">معماری</a></div>
-											</div>
-										</div>
-
-
-										<div class=""inner-post"">
-											<div class=""entry-header"">
-
-												<div class=""entry-meta"">
-													<span class=""posted-on""><a
-															href=""/blogs/details?id=1""
-															rel=""bookmark""><time class=""entry-date published""
-																datetime=""1399-01-01\03:26:55"">1 فروردین
-																1399</time></a></span><span class=""byline""><a
-															class=""url fn n"" href=""../author/theratio/index.htm"">مدیر
-															سایت</a></span><span class=""comment-num""><a
-															href=""/blogs/details?id=1#respond"">0
-															دیدگاه</a></span>
-												</div><!-- .entry-meta -->
-
-												<h4 class=""entry-title""><a class=""title-link""
-														href=""/blogs/details?id=1""
-														rel=""bookmark"">قانون نسبت طلایی برای بهترین طرح 2 بعدی</a></h4>
-											</div><!-- .entry-header -->
-
-											<div class=""entry-summary the-excerpt"">
-
-												<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-													استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
-													ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
-													کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
-
-											</div><!-- .entry-content -->
-											<div class=""entry-footer"">
-												<a href=""/blogs/details?id=1""
-													class=""btn-details""> بیشتر بخوانید</a>
-											</div>
-										</div>
-									</div>
-								</article>
-								<article id=""post-82""
-									class=""post-box masonry-post-item post-82 post type-post status-publish format-standard has-post-thumbnail hentry category-interior tag-exterior tag-interior tag-trends"">
-									<div class=""post-inner"">
-
-										<div class=""entry-media post-cat-abs"">
-											<a href=""/blogs/details?id=1"">
-												<img loading=""lazy"" width=""790"" height=""510""
-													src=""../wp-content/uploads/2020/03/post1-3.jpg""
-													class=""attachment-post-thumbnail size-post-thumbnail wp-post-image""
-													alt="""" decoding=""async""
-													srcset=""../wp-content/uploads/2020/03/post1-3.jpg 790w, ../wp-content/uploads/2020/03/post1-3-300x194.jpg 300w, ../wp-content/uploads/2020/03/post1-3-768x496.jpg 768w, ../wp-content/uploads/2020/03/post1-3-435x281.jpg 435w, ../wp-content/uploads/2020/03/post1-3-720x465.jpg 720w""
-													sizes=""(max-width: 790px) 100vw, 790px""> </a>
-											<div class=""post-cat"">
-												<div class=""posted-in""><a href=""../category/interior/index.htm""
-														rel=""category tag"">داخلی</a></div>
-											</div>
-										</div>
-
-
-										<div class=""inner-post"">
-											<div class=""entry-header"">
-
-												<div class=""entry-meta"">
-													<span class=""posted-on""><a
-															href=""/blogs/details?id=1""
-															rel=""bookmark""><time class=""entry-date published""
-																datetime=""1398-12-29\03:32:55"">29 اسفند
-																1398</time></a></span><span class=""byline""><a
-															class=""url fn n"" href=""../author/theratio/index.htm"">مدیر
-															سایت</a></span><span class=""comment-num""><a
-															href=""/blogs/details?id=1#respond"">0
-															دیدگاه</a></span>
-												</div><!-- .entry-meta -->
-
-												<h4 class=""entry-title""><a class=""title-link""
-														href=""/blogs/details?id=1""
-														rel=""bookmark"">از رنگهای پاستلی و مواد طبیعی استفاده کنید</a>
-												</h4>
-											</div><!-- .entry-header -->
-
-											<div class=""entry-summary the-excerpt"">
-
-												<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-													استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
-													ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
-													کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
-
-											</div><!-- .entry-content -->
-											<div class=""entry-footer"">
-												<a href=""/blogs/details?id=1""
-													class=""btn-details""> بیشتر بخوانید</a>
-											</div>
-										</div>
-									</div>
-								</article>
-								<article id=""post-80""
-									class=""post-box masonry-post-item post-80 post type-post status-publish format-standard hentry category-achitecture tag-furniture tag-architecture"">
-									<div class=""post-inner"">
-
-										<div class=""entry-media"">
-											<div class=""post-cat"">
-												<div class=""posted-in""><a href=""../category/achitecture/index.htm""
-														rel=""category tag"">معماری</a></div>
-											</div>
-										</div>
-
-
-										<div class=""inner-post"">
-											<div class=""entry-header"">
-
-												<div class=""entry-meta"">
-													<span class=""posted-on""><a
-															href=""/blogs/details?id=1""
-															rel=""bookmark""><time class=""entry-date published""
-																datetime=""1398-12-29\03:17:44"">29 اسفند
-																1398</time></a></span><span class=""byline""><a
-															class=""url fn n"" href=""../author/theratio/index.htm"">مدیر
-															سایت</a></span><span class=""comment-num""><a
-															href=""/blogs/details?id=1#respond"">0
-															دیدگاه</a></span>
-												</div><!-- .entry-meta -->
-
-												<h4 class=""entry-title""><a class=""title-link""
-														href=""/blogs/details?id=1""
-														rel=""bookmark"">معماری و مناظر باورنکردنی شهری</a></h4>
-											</div><!-- .entry-header -->
-
-											<div class=""entry-summary the-excerpt"">
-
-												<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-													استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
-													ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
-													کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
-
-											</div><!-- .entry-content -->
-											<div class=""entry-footer"">
-												<a href=""/blogs/details?id=1""
-													class=""btn-details""> بیشتر بخوانید</a>
-											</div>
-										</div>
-									</div>
-								</article>
 								<ul class=""page-pagination none-style"">
 									<li><span aria-current=""page"" class=""page-numbers current"">1</span></li>
 									<li><a class=""page-numbers"" href=""page/2/index.htm"">2</a></li>
@@ -1641,66 +1431,7 @@
 							<section id=""recent_news-1"" class=""widget widget_recent_news"">
 								<h6 class=""widget-title"">نوشته های اخیر</h6>
 								<ul class=""recent-news clearfix"">
-									<li class=""clearfix"">
-										<div class=""thumb"">
-											<a href=""/blogs/details?id=1"">
-												<img loading=""lazy"" width=""150"" height=""150""
-													src=""../wp-content/uploads/2020/03/post8-3-150x150.jpg""
-													class=""attachment-thumbnail size-thumbnail wp-post-image"" alt=""""
-													decoding=""async""
-													srcset=""../wp-content/uploads/2020/03/post8-3-150x150.jpg 150w, ../wp-content/uploads/2020/03/post8-3-100x100.jpg 100w""
-													sizes=""(max-width: 150px) 100vw, 150px""> </a>
-										</div>
-										<div class=""entry-header"">
-											<h6>
-												<a href=""/blogs/details?id=1"">10
-													نکته برتر برای طراحی داخلی آشپزخانه شما</a>
-											</h6>
-											<span class=""post-on"">
-												<span class=""entry-date"">29 اسفند 1398</span>
-											</span>
-										</div>
-									</li>
-									<li class=""clearfix"">
-										<div class=""thumb"">
-											<a href=""/blogs/details?id=1"">
-												<img loading=""lazy"" width=""150"" height=""150""
-													src=""../wp-content/uploads/2020/03/post9-3-150x150.jpg""
-													class=""attachment-thumbnail size-thumbnail wp-post-image"" alt=""""
-													decoding=""async""
-													srcset=""../wp-content/uploads/2020/03/post9-3-150x150.jpg 150w, ../wp-content/uploads/2020/03/post9-3-100x100.jpg 100w""
-													sizes=""(max-width: 150px) 100vw, 150px""> </a>
-										</div>
-										<div class=""entry-header"">
-											<h6>
-												<a href=""/blogs/details?id=1"">قانون
-													نسبت طلایی برای بهترین طرح 2 بعدی</a>
-											</h6>
-											<span class=""post-on"">
-												<span class=""entry-date"">29 اسفند 1398</span>
-											</span>
-										</div>
-									</li>
-									<li class=""clearfix"">
-										<div class=""thumb"">
-											<a href=""/blogs/details?id=1"">
-												<img loading=""lazy"" width=""150"" height=""150""
-													src=""../wp-content/uploads/2020/03/post1-3-150x150.jpg""
-													class=""attachment-thumbnail size-thumbnail wp-post-image"" alt=""""
-													decoding=""async""
-													srcset=""../wp-content/uploads/2020/03/post1-3-150x150.jpg 150w, ../wp-content/uploads/2020/03/post1-3-100x100.jpg 100w""
-													sizes=""(max-width: 150px) 100vw, 150px""> </a>
-										</div>
-										<div class=""entry-header"">
-											<h6>
-												<a href=""/blogs/details?id=1"">از رنگهای
-													پاستلی و مواد طبیعی استفاده کنید</a>
-											</h6>
-											<span class=""post-on"">
-												<span class=""entry-date"">29 اسفند 1398</span>
-											</span>
-										</div>
-									</li>
+									{Pubdo.BlogSideNewPosts(ViewBag.LastBlogs)}
 								</ul>
 
 							</section>
@@ -1723,7 +1454,7 @@
 				<section
 					class=""elementor-section elementor-top-section elementor-element elementor-element-45eddd5 elementor-section-boxed elementor-section-height-default elementor-section-height-default""
 					data-id=""45eddd5"" data-element_type=""section""
-					data-settings=""{&quot;background_background&quot;:&quot;classic&quot;}"">
+					data-settings=""{{&quot;background_background&quot;:&quot;classic&quot;}}"">
 					<div class=""elementor-container elementor-column-gap-extended"">
 						<div class=""elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-89b3216 ot-flex-column-vertical""
 							data-id=""89b3216"" data-element_type=""column"">
@@ -1955,21 +1686,21 @@
 									data-id=""264827b"" data-element_type=""widget"" data-widget_type=""shortcode.default"">
 									<div class=""elementor-widget-container"">
 										<div class=""elementor-shortcode"">
-											<script>(function () {
-													window.mc4wp = window.mc4wp || {
+											<script>(function () {{
+													window.mc4wp = window.mc4wp || {{
 														listeners: [],
-														forms: {
-															on: function (evt, cb) {
+														forms: {{
+															on: function (evt, cb) {{
 																window.mc4wp.listeners.push(
-																	{
+																	{{
 																		event: evt,
 																		callback: cb
-																	}
+																	}}
 																);
-															}
-														}
-													}
-												})();
+															}}
+														}}
+													}}
+												}})();
 											</script><!-- Mailchimp for WordPress v4.9.17 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
 											<form id=""mc4wp-form-1"" class=""mc4wp-form mc4wp-form-2919"" method=""post""
 												data-id=""2919"" data-name="""">
@@ -2004,7 +1735,7 @@
 				<section
 					class=""elementor-section elementor-top-section elementor-element elementor-element-e141eb5 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default""
 					data-id=""e141eb5"" data-element_type=""section""
-					data-settings=""{&quot;background_background&quot;:&quot;classic&quot;}"">
+					data-settings=""{{&quot;background_background&quot;:&quot;classic&quot;}}"">
 					<div class=""elementor-container elementor-column-gap-extended"">
 						<div class=""elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-a8a7a8d ot-flex-column-vertical""
 							data-id=""a8a7a8d"" data-element_type=""column"">
@@ -2050,58 +1781,58 @@
 	</div><!-- #page -->
 
 	<script>
-		window.RS_MODULES = window.RS_MODULES || {};
-		window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+		window.RS_MODULES = window.RS_MODULES || {{}};
+		window.RS_MODULES.modules = window.RS_MODULES.modules || {{}};
 		window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
 		window.RS_MODULES.defered = true;
-		window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+		window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {{}};
 		window.RS_MODULES.type = 'compiled';
 	</script>
-	<script>(function () {
-			function maybePrefixUrlField() {
+	<script>(function () {{
+			function maybePrefixUrlField() {{
 				const value = this.value.trim()
-				if (value !== '' && value.indexOf('http') !== 0) {
+				if (value !== '' && value.indexOf('http') !== 0) {{
 					this.value = 'http://' + value
-				}
-			}
+				}}
+			}}
 
 			const urlFields = document.querySelectorAll('.mc4wp-form input[type=""url""]')
-			for (let j = 0; j < urlFields.length; j++) {
+			for (let j = 0; j < urlFields.length; j++) {{
 				urlFields[j].addEventListener('blur', maybePrefixUrlField)
-			}
-		})();</script><a id=""back-to-top"" href=""#"" class=""show""><i class=""ot-flaticon-left-arrow""></i></a>
+			}}
+		}})();</script><a id=""back-to-top"" href=""#"" class=""show""><i class=""ot-flaticon-left-arrow""></i></a>
 	<script type='text/javascript'>
-		const lazyloadRunObserver = () => {
+		const lazyloadRunObserver = () => {{
 			const lazyloadBackgrounds = document.querySelectorAll(`.e-con.e-parent:not(.e-lazyloaded)`);
-			const lazyloadBackgroundObserver = new IntersectionObserver((entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
+			const lazyloadBackgroundObserver = new IntersectionObserver((entries) => {{
+				entries.forEach((entry) => {{
+					if (entry.isIntersecting) {{
 						let lazyloadBackground = entry.target;
-						if (lazyloadBackground) {
+						if (lazyloadBackground) {{
 							lazyloadBackground.classList.add('e-lazyloaded');
-						}
+						}}
 						lazyloadBackgroundObserver.unobserve(entry.target);
-					}
-				});
-			}, { rootMargin: '200px 0px 200px 0px' });
-			lazyloadBackgrounds.forEach((lazyloadBackground) => {
+					}}
+				}});
+			}}, {{ rootMargin: '200px 0px 200px 0px' }});
+			lazyloadBackgrounds.forEach((lazyloadBackground) => {{
 				lazyloadBackgroundObserver.observe(lazyloadBackground);
-			});
-		};
+			}});
+		}};
 		const events = [
 			'DOMContentLoaded',
 			'elementor/lazyload/observe',
 		];
-		events.forEach((event) => {
+		events.forEach((event) => {{
 			document.addEventListener(event, lazyloadRunObserver);
-		});
+		}});
 	</script>
 	<script type='text/javascript'>
-		(function () {
+		(function () {{
 			var c = document.body.className;
 			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
 			document.body.className = c;
-		})();
+		}})();
 	</script>
 	<link rel='stylesheet' id='wc-blocks-style-rtl-css'
 		href='../wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks-rtl-2.css?ver=wc-9.3.3' type='text/css'
@@ -2159,7 +1890,7 @@
 	<link rel='stylesheet' id='rs-plugin-settings-css'
 		href='../wp-content/plugins/revslider/sr6/assets/css/rs6-2.css?ver=6.7.19' type='text/css' media='all'>
 	<style id='rs-plugin-settings-inline-css' type='text/css'>
-		#rs-demo-id {}
+		#rs-demo-id {{}}
 	</style>
 	<script type=""text/javascript"" src=""../wp-includes/js/dist/hooks.min-2.js?ver=4d63a3d491d11ffd8ac6""
 		id=""wp-hooks-js""></script>
@@ -2167,23 +1898,23 @@
 		id=""wp-i18n-js""></script>
 	<script type=""text/javascript"" id=""wp-i18n-js-after"">
 		/* <![CDATA[ */
-		wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['rtl'] });
+		wp.i18n.setLocaleData({{ 'text direction\u0004ltr': ['rtl'] }});
 		/* ]]> */
 	</script>
 	<script type=""text/javascript"" src=""../wp-content/plugins/contact-form-7/includes/swv/js/index-2.js?ver=5.9.8""
 		id=""swv-js""></script>
 	<script type=""text/javascript"" id=""contact-form-7-js-extra"">
 		/* <![CDATA[ */
-		var wpcf7 = { ""api"": { ""root"": ""https:\/\/theratio.hamsedaweb.ir\/wp-json\/"", ""namespace"": ""contact-form-7\/v1"" } };
+		var wpcf7 = {{ ""api"": {{ ""root"": ""https:\/\/theratio.hamsedaweb.ir\/wp-json\/"", ""namespace"": ""contact-form-7\/v1"" }} }};
 		/* ]]> */
 	</script>
 	<script type=""text/javascript"" id=""contact-form-7-js-translations"">
 		/* <![CDATA[ */
-		(function (domain, translations) {
+		(function (domain, translations) {{
 			var localeData = translations.locale_data[domain] || translations.locale_data.messages;
 			localeData[""""].domain = domain;
 			wp.i18n.setLocaleData(localeData, domain);
-		})(""contact-form-7"", { ""translation-revision-date"": ""2024-08-16 10:22:14+0000"", ""generator"": ""GlotPress\/4.0.1"", ""domain"": ""messages"", ""locale_data"": { ""messages"": { """": { ""domain"": ""messages"", ""plural-forms"": ""nplurals=1; plural=0;"", ""lang"": ""fa"" }, ""This contact form is placed in the wrong place."": [""\u0627\u06cc\u0646 \u0641\u0631\u0645 \u062a\u0645\u0627\u0633 \u062f\u0631 \u062c\u0627\u06cc \u0627\u0634\u062a\u0628\u0627\u0647\u06cc \u0642\u0631\u0627\u0631 \u062f\u0627\u062f\u0647 \u0634\u062f\u0647 \u0627\u0633\u062a.""], ""Error:"": [""\u062e\u0637\u0627:""] } }, ""comment"": { ""reference"": ""includes\/js\/index.js"" } });
+		}})(""contact-form-7"", {{ ""translation-revision-date"": ""2024-08-16 10:22:14+0000"", ""generator"": ""GlotPress\/4.0.1"", ""domain"": ""messages"", ""locale_data"": {{ ""messages"": {{ """": {{ ""domain"": ""messages"", ""plural-forms"": ""nplurals=1; plural=0;"", ""lang"": ""fa"" }}, ""This contact form is placed in the wrong place."": [""\u0627\u06cc\u0646 \u0641\u0631\u0645 \u062a\u0645\u0627\u0633 \u062f\u0631 \u062c\u0627\u06cc \u0627\u0634\u062a\u0628\u0627\u0647\u06cc \u0642\u0631\u0627\u0631 \u062f\u0627\u062f\u0647 \u0634\u062f\u0647 \u0627\u0633\u062a.""], ""Error:"": [""\u062e\u0637\u0627:""] }} }}, ""comment"": {{ ""reference"": ""includes\/js\/index.js"" }} }});
 		/* ]]> */
 	</script>
 	<script type=""text/javascript"" src=""../wp-content/plugins/contact-form-7/includes/js/index-2.js?ver=5.9.8""
@@ -2219,7 +1950,7 @@
 		id=""sourcebuster-js-js""></script>
 	<script type=""text/javascript"" id=""wc-order-attribution-js-extra"">
 		/* <![CDATA[ */
-		var wc_order_attribution = { ""params"": { ""lifetime"": 1.0e-5, ""session"": 30, ""base64"": false, ""ajaxurl"": ""https:\/\/theratio.hamsedaweb.ir\/wp-admin\/admin-ajax.php"", ""prefix"": ""wc_order_attribution_"", ""allowTracking"": true }, ""fields"": { ""source_type"": ""current.typ"", ""referrer"": ""current_add.rf"", ""utm_campaign"": ""current.cmp"", ""utm_source"": ""current.src"", ""utm_medium"": ""current.mdm"", ""utm_content"": ""current.cnt"", ""utm_id"": ""current.id"", ""utm_term"": ""current.trm"", ""utm_source_platform"": ""current.plt"", ""utm_creative_format"": ""current.fmt"", ""utm_marketing_tactic"": ""current.tct"", ""session_entry"": ""current_add.ep"", ""session_start_time"": ""current_add.fd"", ""session_pages"": ""session.pgs"", ""session_count"": ""udata.vst"", ""user_agent"": ""udata.uag"" } };
+		var wc_order_attribution = {{ ""params"": {{ ""lifetime"": 1.0e-5, ""session"": 30, ""base64"": false, ""ajaxurl"": ""https:\/\/theratio.hamsedaweb.ir\/wp-admin\/admin-ajax.php"", ""prefix"": ""wc_order_attribution_"", ""allowTracking"": true }}, ""fields"": {{ ""source_type"": ""current.typ"", ""referrer"": ""current_add.rf"", ""utm_campaign"": ""current.cmp"", ""utm_source"": ""current.src"", ""utm_medium"": ""current.mdm"", ""utm_content"": ""current.cnt"", ""utm_id"": ""current.id"", ""utm_term"": ""current.trm"", ""utm_source_platform"": ""current.plt"", ""utm_creative_format"": ""current.fmt"", ""utm_marketing_tactic"": ""current.tct"", ""session_entry"": ""current_add.ep"", ""session_start_time"": ""current_add.fd"", ""session_pages"": ""session.pgs"", ""session_count"": ""udata.vst"", ""user_agent"": ""udata.uag"" }} }};
 		/* ]]> */
 	</script>
 	<script type=""text/javascript""
@@ -2227,7 +1958,7 @@
 		id=""wc-order-attribution-js""></script>
 	<script type=""text/javascript"" id=""wc-cart-fragments-js-extra"">
 		/* <![CDATA[ */
-		var wc_cart_fragments_params = { ""ajax_url"": ""\/wp-admin\/admin-ajax.php"", ""wc_ajax_url"": ""\/?wc-ajax=%%endpoint%%"", ""cart_hash_key"": ""wc_cart_hash_f60fa5fbaea663e5f84f4a534b8b0786"", ""fragment_name"": ""wc_fragments_f60fa5fbaea663e5f84f4a534b8b0786"", ""request_timeout"": ""5000"" };
+		var wc_cart_fragments_params = {{ ""ajax_url"": ""\/wp-admin\/admin-ajax.php"", ""wc_ajax_url"": ""\/?wc-ajax=%%endpoint%%"", ""cart_hash_key"": ""wc_cart_hash_f60fa5fbaea663e5f84f4a534b8b0786"", ""fragment_name"": ""wc_fragments_f60fa5fbaea663e5f84f4a534b8b0786"", ""request_timeout"": ""5000"" }};
 		/* ]]> */
 	</script>
 	<script type=""text/javascript""
@@ -2243,7 +1974,7 @@
 		id=""jquery-ui-core-js""></script>
 	<script type=""text/javascript"" id=""elementor-frontend-js-before"">
 		/* <![CDATA[ */
-		var elementorFrontendConfig = { ""environmentMode"": { ""edit"": false, ""wpPreview"": false, ""isScriptDebug"": false }, ""i18n"": { ""shareOnFacebook"": ""\u0627\u0634\u062a\u0631\u0627\u06a9 \u06af\u0630\u0627\u0631\u06cc \u062f\u0631 Facebook"", ""shareOnTwitter"": ""\u0627\u0634\u062a\u0631\u0627\u06a9 \u06af\u0630\u0627\u0631\u06cc \u062f\u0631 Twitter"", ""pinIt"": ""\u067e\u06cc\u0646 \u06a9\u0646\u06cc\u062f"", ""download"": ""\u062f\u0627\u0646\u0644\u0648\u062f"", ""downloadImage"": ""\u062f\u0627\u0646\u0644\u0648\u062f \u062a\u0635\u0648\u06cc\u0631"", ""fullscreen"": ""\u062a\u0645\u0627\u0645\u200c\u0635\u0641\u062d\u0647"", ""zoom"": ""\u0628\u0632\u0631\u06af\u0646\u0645\u0627\u06cc\u06cc"", ""share"": ""\u0627\u0634\u062a\u0631\u0627\u06a9 \u06af\u0630\u0627\u0631\u06cc"", ""playVideo"": ""\u067e\u062e\u0634 \u0648\u06cc\u062f\u06cc\u0648"", ""previous"": ""\u0642\u0628\u0644\u06cc"", ""next"": ""\u0628\u0639\u062f\u06cc"", ""close"": ""\u0628\u0633\u062a\u0646"", ""a11yCarouselWrapperAriaLabel"": ""\u0686\u0631\u062e \u0641\u0644\u06a9 | \u067e\u06cc\u0645\u0627\u06cc\u0634 \u0627\u0641\u0642\u06cc: \u0641\u0644\u0634 \u0686\u067e \u0648 \u0631\u0627\u0633\u062a"", ""a11yCarouselPrevSlideMessage"": ""\u0627\u0633\u0644\u0627\u06cc\u062f \u0642\u0628\u0644\u06cc"", ""a11yCarouselNextSlideMessage"": ""\u0627\u0633\u0644\u0627\u06cc\u062f \u0628\u0639\u062f\u06cc"", ""a11yCarouselFirstSlideMessage"": ""\u0627\u06cc\u0646 \u0627\u0648\u0644\u06cc\u0646 \u0627\u0633\u0644\u0627\u06cc\u062f \u0627\u0633\u062a"", ""a11yCarouselLastSlideMessage"": ""\u0627\u06cc\u0646 \u0622\u062e\u0631\u06cc\u0646 \u0627\u0633\u0644\u0627\u06cc\u062f \u0627\u0633\u062a"", ""a11yCarouselPaginationBulletMessage"": ""\u0631\u0641\u062a\u0646 \u0628\u0647 \u0627\u0633\u0644\u0627\u06cc\u062f"" }, ""is_rtl"": true, ""breakpoints"": { ""xs"": 0, ""sm"": 480, ""md"": 768, ""lg"": 1025, ""xl"": 1440, ""xxl"": 1600 }, ""responsive"": { ""breakpoints"": { ""mobile"": { ""label"": ""\u062d\u0627\u0644\u062a \u0639\u0645\u0648\u062f\u06cc \u0645\u0648\u0628\u0627\u06cc\u0644"", ""value"": 767, ""default_value"": 767, ""direction"": ""max"", ""is_enabled"": true }, ""mobile_extra"": { ""label"": ""\u062d\u0627\u0644\u062a \u0627\u0641\u0642\u06cc \u0645\u0648\u0628\u0627\u06cc\u0644"", ""value"": 880, ""default_value"": 880, ""direction"": ""max"", ""is_enabled"": false }, ""tablet"": { ""label"": ""\u062d\u0627\u0644\u062a \u0639\u0645\u0648\u062f\u06cc \u062a\u0628\u0644\u062a"", ""value"": 1024, ""default_value"": 1024, ""direction"": ""max"", ""is_enabled"": true }, ""tablet_extra"": { ""label"": ""\u062d\u0627\u0644\u062a \u0627\u0641\u0642\u06cc \u062a\u0628\u0644\u062a"", ""value"": 1200, ""default_value"": 1200, ""direction"": ""max"", ""is_enabled"": false }, ""laptop"": { ""label"": ""\u0644\u067e \u062a\u0627\u067e"", ""value"": 1366, ""default_value"": 1366, ""direction"": ""max"", ""is_enabled"": false }, ""widescreen"": { ""label"": ""\u0635\u0641\u062d\u0647 \u0639\u0631\u06cc\u0636 (Widescreen)"", ""value"": 2400, ""default_value"": 2400, ""direction"": ""min"", ""is_enabled"": false } } }, ""version"": ""3.24.4"", ""is_static"": false, ""experimentalFeatures"": { ""additional_custom_breakpoints"": true, ""container_grid"": true, ""e_swiper_latest"": true, ""e_nested_atomic_repeaters"": true, ""e_onboarding"": true, ""home_screen"": true, ""ai-layout"": true, ""landing-pages"": true, ""link-in-bio"": true, ""floating-buttons"": true }, ""urls"": { ""assets"": ""https:\/\/theratio.hamsedaweb.ir\/wp-content\/plugins\/elementor\/assets\/"", ""ajaxurl"": ""https:\/\/theratio.hamsedaweb.ir\/wp-admin\/admin-ajax.php"" }, ""nonces"": { ""floatingButtonsClickTracking"": ""4e15421383"" }, ""swiperClass"": ""swiper"", ""settings"": { ""editorPreferences"": [] }, ""kit"": { ""active_breakpoints"": [""viewport_mobile"", ""viewport_tablet""], ""global_image_lightbox"": ""yes"", ""lightbox_enable_counter"": ""yes"", ""lightbox_enable_fullscreen"": ""yes"", ""lightbox_enable_zoom"": ""yes"", ""lightbox_enable_share"": ""yes"", ""lightbox_title_src"": ""title"", ""lightbox_description_src"": ""description"" }, ""post"": { ""id"": 0, ""title"": ""\u0648\u0628\u0644\u0627\u06af &#8211; Theratio"", ""excerpt"": """" } };
+		var elementorFrontendConfig = {{ ""environmentMode"": {{ ""edit"": false, ""wpPreview"": false, ""isScriptDebug"": false }}, ""i18n"": {{ ""shareOnFacebook"": ""\u0627\u0634\u062a\u0631\u0627\u06a9 \u06af\u0630\u0627\u0631\u06cc \u062f\u0631 Facebook"", ""shareOnTwitter"": ""\u0627\u0634\u062a\u0631\u0627\u06a9 \u06af\u0630\u0627\u0631\u06cc \u062f\u0631 Twitter"", ""pinIt"": ""\u067e\u06cc\u0646 \u06a9\u0646\u06cc\u062f"", ""download"": ""\u062f\u0627\u0646\u0644\u0648\u062f"", ""downloadImage"": ""\u062f\u0627\u0646\u0644\u0648\u062f \u062a\u0635\u0648\u06cc\u0631"", ""fullscreen"": ""\u062a\u0645\u0627\u0645\u200c\u0635\u0641\u062d\u0647"", ""zoom"": ""\u0628\u0632\u0631\u06af\u0646\u0645\u0627\u06cc\u06cc"", ""share"": ""\u0627\u0634\u062a\u0631\u0627\u06a9 \u06af\u0630\u0627\u0631\u06cc"", ""playVideo"": ""\u067e\u062e\u0634 \u0648\u06cc\u062f\u06cc\u0648"", ""previous"": ""\u0642\u0628\u0644\u06cc"", ""next"": ""\u0628\u0639\u062f\u06cc"", ""close"": ""\u0628\u0633\u062a\u0646"", ""a11yCarouselWrapperAriaLabel"": ""\u0686\u0631\u062e \u0641\u0644\u06a9 | \u067e\u06cc\u0645\u0627\u06cc\u0634 \u0627\u0641\u0642\u06cc: \u0641\u0644\u0634 \u0686\u067e \u0648 \u0631\u0627\u0633\u062a"", ""a11yCarouselPrevSlideMessage"": ""\u0627\u0633\u0644\u0627\u06cc\u062f \u0642\u0628\u0644\u06cc"", ""a11yCarouselNextSlideMessage"": ""\u0627\u0633\u0644\u0627\u06cc\u062f \u0628\u0639\u062f\u06cc"", ""a11yCarouselFirstSlideMessage"": ""\u0627\u06cc\u0646 \u0627\u0648\u0644\u06cc\u0646 \u0627\u0633\u0644\u0627\u06cc\u062f \u0627\u0633\u062a"", ""a11yCarouselLastSlideMessage"": ""\u0627\u06cc\u0646 \u0622\u062e\u0631\u06cc\u0646 \u0627\u0633\u0644\u0627\u06cc\u062f \u0627\u0633\u062a"", ""a11yCarouselPaginationBulletMessage"": ""\u0631\u0641\u062a\u0646 \u0628\u0647 \u0627\u0633\u0644\u0627\u06cc\u062f"" }}, ""is_rtl"": true, ""breakpoints"": {{ ""xs"": 0, ""sm"": 480, ""md"": 768, ""lg"": 1025, ""xl"": 1440, ""xxl"": 1600 }}, ""responsive"": {{ ""breakpoints"": {{ ""mobile"": {{ ""label"": ""\u062d\u0627\u0644\u062a \u0639\u0645\u0648\u062f\u06cc \u0645\u0648\u0628\u0627\u06cc\u0644"", ""value"": 767, ""default_value"": 767, ""direction"": ""max"", ""is_enabled"": true }}, ""mobile_extra"": {{ ""label"": ""\u062d\u0627\u0644\u062a \u0627\u0641\u0642\u06cc \u0645\u0648\u0628\u0627\u06cc\u0644"", ""value"": 880, ""default_value"": 880, ""direction"": ""max"", ""is_enabled"": false }}, ""tablet"": {{ ""label"": ""\u062d\u0627\u0644\u062a \u0639\u0645\u0648\u062f\u06cc \u062a\u0628\u0644\u062a"", ""value"": 1024, ""default_value"": 1024, ""direction"": ""max"", ""is_enabled"": true }}, ""tablet_extra"": {{ ""label"": ""\u062d\u0627\u0644\u062a \u0627\u0641\u0642\u06cc \u062a\u0628\u0644\u062a"", ""value"": 1200, ""default_value"": 1200, ""direction"": ""max"", ""is_enabled"": false }}, ""laptop"": {{ ""label"": ""\u0644\u067e \u062a\u0627\u067e"", ""value"": 1366, ""default_value"": 1366, ""direction"": ""max"", ""is_enabled"": false }}, ""widescreen"": {{ ""label"": ""\u0635\u0641\u062d\u0647 \u0639\u0631\u06cc\u0636 (Widescreen)"", ""value"": 2400, ""default_value"": 2400, ""direction"": ""min"", ""is_enabled"": false }} }} }}, ""version"": ""3.24.4"", ""is_static"": false, ""experimentalFeatures"": {{ ""additional_custom_breakpoints"": true, ""container_grid"": true, ""e_swiper_latest"": true, ""e_nested_atomic_repeaters"": true, ""e_onboarding"": true, ""home_screen"": true, ""ai-layout"": true, ""landing-pages"": true, ""link-in-bio"": true, ""floating-buttons"": true }}, ""urls"": {{ ""assets"": ""https:\/\/theratio.hamsedaweb.ir\/wp-content\/plugins\/elementor\/assets\/"", ""ajaxurl"": ""https:\/\/theratio.hamsedaweb.ir\/wp-admin\/admin-ajax.php"" }}, ""nonces"": {{ ""floatingButtonsClickTracking"": ""4e15421383"" }}, ""swiperClass"": ""swiper"", ""settings"": {{ ""editorPreferences"": [] }}, ""kit"": {{ ""active_breakpoints"": [""viewport_mobile"", ""viewport_tablet""], ""global_image_lightbox"": ""yes"", ""lightbox_enable_counter"": ""yes"", ""lightbox_enable_fullscreen"": ""yes"", ""lightbox_enable_zoom"": ""yes"", ""lightbox_enable_share"": ""yes"", ""lightbox_title_src"": ""title"", ""lightbox_description_src"": ""description"" }}, ""post"": {{ ""id"": 0, ""title"": ""\u0648\u0628\u0644\u0627\u06af &#8211; Theratio"", ""excerpt"": """" }} }};
 		/* ]]> */
 	</script>
 	<script type=""text/javascript"" src=""../wp-content/plugins/elementor/assets/js/frontend.min-2.js?ver=3.24.4""

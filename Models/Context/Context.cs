@@ -6,6 +6,9 @@ public class Context : DbContext
     public DbSet<WorkPC> WorkPC_tbl { get; set; }
     public DbSet<WorkPost> WorkPosts_tbl { get; set; }
 
+    public DbSet<blogComment> BlogComments_tbl { get; set; }
+    public DbSet<blogPost> BlogPost_tbl { get; set; }
+
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
