@@ -16,7 +16,6 @@ public class WorksController : Controller
             string title = post.Title;
             string discription = post.Discription;
             string body = post.body;
-            string footer = post.footer;
             List<string> images = post.images;
             string mainImg = post.mainImg;
 
@@ -25,7 +24,6 @@ public class WorksController : Controller
             ViewBag.body = body;
             ViewBag.images = images;
             ViewBag.mainImg = mainImg;
-            ViewBag.footer = footer;
 
             return View();
         }

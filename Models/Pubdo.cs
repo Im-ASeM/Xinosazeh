@@ -114,7 +114,7 @@ class=""post-box masonry-post-item post-102 post type-post status-publish format
                 sizes=""(max-width: 790px) 100vw, 790px""> </a>
         <div class=""post-cat"">
             <div class=""posted-in"">
-                {BlogPostKeyWord(post.KeyWords)}
+                {(post.KeyWords != null?BlogPostKeyWord(post.KeyWords):"")}
             </div>
         </div>
     </div>
@@ -130,7 +130,7 @@ class=""post-box masonry-post-item post-102 post type-post status-publish format
                             datetime=""{PersianDate(post.CreateDate)}"">{PersianDate(post.CreateDate)}</time></a></span><span class=""byline""><a
                         class=""url fn n"" href=""../author/theratio/index.htm"">مدیر
                         سایت</a></span><span class=""comment-num""><a
-                        href=""/blogs/details?id={post.Id}#comments"">{post.Comments.Count}
+                        href=""/blogs/details?id={post.Id}#comments"">{(post.Comments != null ? post.Comments.Count : 0)}
                         دیدگاه</a></span>
             </div><!-- .entry-meta -->
 
@@ -190,8 +190,7 @@ class=""post-box masonry-post-item post-102 post type-post status-publish format
 </div>
 <div class=""entry-header"">
     <h6>
-        <a href=""/blogs/details?id={post.Id}"">10
-           {post.Title}</a>
+        <a href=""/blogs/details?id={post.Id}"">{post.Title}</a>
     </h6>
     <span class=""post-on"">
         <span class=""entry-date"">{PersianDate(post.CreateDate)}</span>

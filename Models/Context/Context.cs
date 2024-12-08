@@ -9,9 +9,7 @@ public class Context : DbContext
     public DbSet<blogComment> BlogComments_tbl { get; set; }
     public DbSet<blogPost> BlogPost_tbl { get; set; }
 
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public Context(DbContextOptions<Context> options) : base(options)
     {
-        optionsBuilder.UseSqlServer("server=.\\SQL2019;database=Xinosazeh;user ID=sa;password=1234;MultipleActiveResultSets=True;TrustServerCertificate=True");
     }
 }

@@ -18,7 +18,7 @@ public class WorkController : Controller
     [HttpGet]
     public IActionResult index(int id = 1)
     {
-        var Posts = db.WorkPosts_tbl.Include(x => x.Categories).ThenInclude(x => x.WorkCat).OrderByDescending(x=>x.Id).ToList();
+        var Posts = db.WorkPosts_tbl.Include(x => x.Categories).ThenInclude(x => x.WorkCat).OrderByDescending(x => x.Id).ToList();
         ViewBag.Posts = Posts;
 
         ViewBag.PageNum = id;
@@ -79,7 +79,7 @@ public class WorkController : Controller
     [HttpPost]
     public async Task<ActionResult> NewWorkPost(NewWorkPost NewPost)
     {
-        
+
         if (NewPost.CanConvertToInt() && NewPost.isNullOrEmpty())
         {
             return BadRequest("khalie");
@@ -95,7 +95,6 @@ public class WorkController : Controller
         {
             body = NewPost.body,
             Discription = NewPost.Discription,
-            footer = NewPost.footer,
             images = images,
             mainImg = await patherAsync(NewPost.mainImg),
             Title = NewPost.Title
@@ -115,7 +114,7 @@ public class WorkController : Controller
             db.WorkPC_tbl.Add(cat);
             db.SaveChanges();
         }
-        return Ok("ok shod");
+        return RedirectToAction("index", "work", new { Area = "Admin" });
     }
 
 

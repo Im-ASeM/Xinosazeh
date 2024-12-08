@@ -81,10 +81,6 @@ namespace Gorfe.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("footer")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.PrimitiveCollection<string>("images")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -158,10 +154,6 @@ namespace Gorfe.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("body")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("footer")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

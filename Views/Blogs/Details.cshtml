@@ -1443,7 +1443,7 @@
 															datetime=""{Pubdo.PersianDate(ViewBag.CreateDate)}"">{Pubdo.PersianDate(ViewBag.CreateDate)}</time></a></span><span class=""byline""><a
 														class=""url fn n"">مدیر
 														سایت</a></span><span class=""comment-num""><a
-														href=""index.htm#comments"">{ViewBag.Comments.Count} دیدگاه</a></span>
+														href=""index.htm#comments"">{(ViewBag.Comments != null ? ViewBag.Comments.Count : "")} دیدگاه</a></span>
 											</div><!-- .entry-meta -->
 
 											<h3 class=""entry-title"">{ViewBag.Title}</h3>
@@ -1473,7 +1473,6 @@
 																		<h4></h4>
 																		<p>{ViewBag.body}</p>
 
-																		<p><em>{ViewBag.Footer}</em></p>
 																	</div>
 																</div>
 															</div>
@@ -1515,7 +1514,7 @@
 											<h3>نوشته های مرتبط</h3>
 											<div class=""row"">
 												
-												{Pubdo.BlogDetailFooterPosts(ViewBag.LastBlogs)}
+												{(ViewBag.LastBlogs.Count !=0 ? Pubdo.BlogDetailFooterPosts(ViewBag.LastBlogs) : "")}
 
 											</div>
 										</div>
@@ -1675,7 +1674,7 @@
 							<section id=""recent_news-1"" class=""widget widget_recent_news"">
 								<h6 class=""widget-title"">نوشته های اخیر</h6>
 								<ul class=""recent-news clearfix"">
-									{Pubdo.BlogSideNewPosts(ViewBag.LastBlogs)}
+									{(ViewBag.LastBlogs.Count !=0?Pubdo.BlogSideNewPosts(ViewBag.LastBlogs):"")}
 								</ul>
 
 							</section>

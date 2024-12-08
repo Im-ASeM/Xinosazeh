@@ -1,0 +1,106 @@
+<div class="container-xxl flex-grow-1 container-p-y">
+    <div class="col-xxl">
+        <script src="../../assets/vendor/libs/quill/katex.js"></script>
+        <script src="../../assets/vendor/libs/quill/quill.js"></script>
+        <div class="card mb-4">
+            <form action="/Admin/Blog/NewPost" method="post" enctype="multipart/form-data" id="postForm">
+                <h5 class="card-header heading-color">بلاگ جدید</h5>
+                <div class="card-body row">
+
+                    <div class="mb-3 col-lg-6 col-xl-6 col-12">
+                        <label for="PostTitle" class="form-label">عنوان سرتیتر</label>
+                        <input type="text" class="form-control" id="PostTitle" placeholder="تایتل را وارد کنید"
+                            aria-describedby="defaultFormControlHelp" name="Title" autofocus required>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-12 mb-4">
+                        <label for="KeyWords" class="form-label">کلمات کلیدی</label>
+                        <input type="text" class="form-control" id="KeyWords" placeholder="کلمات کلیدی را با , جدا کنید."
+                            aria-describedby="defaultFormControlHelp" name="StringKeyWords" required>
+                    </div>
+
+                    <div class="mb-3 col-lg-6 col-xl-6 col-12">
+                        <label for="formFile" class="form-label">تصویر اصلی</label>
+                        <input class="form-control" type="file" id="formFile" name="mainImg" required />
+                    </div>
+
+                    <div class="mb-3 col-lg-6 col-xl-6 col-12">
+                        <label for="formFile" class="form-label">تصاویر</label>
+                        <input class="form-control" type="file" id="formFile" name="images" multiple required />
+                    </div>
+
+                    <div class="mb-3 col-lg-12 col-xl-12 col-12">
+                        <label for="postCap" class="form-label">کپشن پست</label>
+                        <textarea type="text" class="form-control" id="postCap"
+                            placeholder="متن کوتاه شده که به موضوع پست اشاره کند."
+                            aria-describedby="defaultFormControlHelp" name="Discription" required></textarea>
+                    </div>
+                    <div class="mb-3 col-lg-12 col-xl-12 col-12">
+                        <label for="snow-toolbar" class="form-label">محتوای پست</label>
+                        <input type="hidden" name="body" id="hiddenBodyText">
+                        <div class="mt-1 mb-1">
+                            <div id="snow-toolbar">
+                                <span class="ql-formats">
+                                    <select class="ql-font"></select>
+                                    <select class="ql-size"></select>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-bold"></button>
+                                    <button class="ql-italic"></button>
+                                    <button class="ql-underline"></button>
+                                    <button class="ql-strike"></button>
+                                </span>
+                                <span class="ql-formats">
+                                    <select class="ql-color"></select>
+                                    <select class="ql-background"></select>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-script" value="sub"></button>
+                                    <button class="ql-script" value="super"></button>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-header" value="1"></button>
+                                    <button class="ql-header" value="2"></button>
+                                    <button class="ql-blockquote"></button>
+                                    <button class="ql-code-block"></button>
+                                </span>
+                            </div>
+                            <div id="snow-editor">
+                                <h4>متن اصلی را وارد کنید ...</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 col">
+                        <button class="btn btn-outline-success w-100" style="white-space: nowrap;" type="submit">
+                            ایجاد پست جدید
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        const snowEditor = new Quill('#snow-editor', {
+            bounds: '#snow-editor',
+            modules: {
+                formula: true,
+                toolbar: '#snow-toolbar'
+            },
+            theme: 'snow'
+        });
+
+        $('#postForm').submit(function (event) {
+            event.preventDefault();
+
+            var editorContent = snowEditor.root.innerHTML;
+            $('#hiddenBodyText').val(editorContent);
+
+            this.submit();
+        });
+    });
+</script>

@@ -7,7 +7,6 @@ public class NewWorkPost
     public string? body { get; set; }
     public List<IFormFile>? images { get; set; }
     public IFormFile? mainImg { get; set; }
-    public string? footer { get; set; }
 
     public string? CategoriesIdString { get; set; }
     public List<int>? CategoriesId { get; set; }
@@ -21,7 +20,6 @@ public class NewWorkPost
         if (String.IsNullOrEmpty(body)) result = true;
         if (images?.Count == 0) result = true;
         if (mainImg == null) result = true;
-        if (String.IsNullOrEmpty(footer)) result = true;
         if (CategoriesId.Count == 0) result = true;
 
         return result;

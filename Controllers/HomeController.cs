@@ -46,36 +46,9 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult Blog()
     {
-        var blogs = db.BlogPost_tbl.ToList();
-        blogs.Add(new blogPost
-        {
-            body = "body",
-            Comments = new List<blogComment>(),
-            CreateDate = DateTime.UtcNow,
-            Discription = "Discription",
-            footer = "footer",
-            Id = 1,
-            images = new List<string>() { "/wp-content/uploads/2020/03/post1-3.jpg", "/wp-content/uploads/2020/03/post1-3.jpg" },
-            mainImg = "/uploads/6d8cc40e-bbaa-439a-be9a-53b20e082e98.JPG",
-            KeyWords = new List<string>() { "salam", "khodafez" },
-            Title = "title vagheii"
-        });
-        blogs.Add(new blogPost
-        {
-            body = "body",
-            Comments = new List<blogComment>(),
-            CreateDate = DateTime.UtcNow,
-            Discription = "Discription",
-            footer = "footer",
-            Id = 1,
-            images = new List<string>() { "/wp-content/uploads/2020/03/post1-3.jpg", "/wp-content/uploads/2020/03/post1-3.jpg" },
-            mainImg = "/uploads/6d8cc40e-bbaa-439a-be9a-53b20e082e98.JPG",
-            KeyWords = new List<string>() { "salam", "khodafez" },
-            Title = "title vagheii 2"
-        });
-        ViewBag.LastBlogs = blogs.OrderByDescending(x => x.Id).Take(2).ToList();
+        var blogs = db.BlogPost_tbl.OrderByDescending(x => x.Id).ToList();
+        ViewBag.LastBlogs = blogs.Take(2).ToList();
         ViewBag.blogs = blogs;
-
         return View();
     }
 

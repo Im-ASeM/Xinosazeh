@@ -1,8 +1,9 @@
 <div class="container-xxl flex-grow-1 container-p-y">
     <div class="col-xxl">
-
+        <script src="../../assets/vendor/libs/quill/katex.js"></script>
+        <script src="../../assets/vendor/libs/quill/quill.js"></script>
         <div class="card mb-4">
-            <form action="/Admin/Work/NewWorkPost" method="post" enctype="multipart/form-data">
+            <form action="/Admin/Work/NewWorkPost" method="post" enctype="multipart/form-data" id="postForm">
                 <h5 class="card-header heading-color">پست جدید</h5>
                 <div class="card-body row">
 
@@ -65,16 +66,39 @@
                             aria-describedby="defaultFormControlHelp" name="Discription" required></textarea>
                     </div>
                     <div class="mb-3 col-lg-12 col-xl-12 col-12">
-                        <label for="postContent" class="form-label">محتوای پست</label>
-                        <textarea type="text" class="form-control" id="postContent"
-                            placeholder="متن اصلی پست را وارد کنید." aria-describedby="defaultFormControlHelp"
-                            name="Body" required></textarea>
-                    </div>
-                    <div class="mb-3 col-lg-12 col-xl-12 col-12">
-                        <label for="postFooter" class="form-label">فوتر پست</label>
-                        <textarea type="text" class="form-control" id="postFooter"
-                            placeholder="متن پایانی پست را وارد کنید." aria-describedby="defaultFormControlHelp"
-                            name="Footer" required></textarea>
+                        <label for="snow-toolbar" class="form-label">محتوای پست</label>
+                        <input type="hidden" name="body" id="hiddenBodyText">
+                        <div class="mt-1 mb-1">
+                            <div id="snow-toolbar">
+                                <span class="ql-formats">
+                                    <select class="ql-font"></select>
+                                    <select class="ql-size"></select>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-bold"></button>
+                                    <button class="ql-italic"></button>
+                                    <button class="ql-underline"></button>
+                                    <button class="ql-strike"></button>
+                                </span>
+                                <span class="ql-formats">
+                                    <select class="ql-color"></select>
+                                    <select class="ql-background"></select>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-script" value="sub"></button>
+                                    <button class="ql-script" value="super"></button>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-header" value="1"></button>
+                                    <button class="ql-header" value="2"></button>
+                                    <button class="ql-blockquote"></button>
+                                    <button class="ql-code-block"></button>
+                                </span>
+                            </div>
+                            <div id="snow-editor">
+                                <h4>متن اصلی را وارد کنید ...</h4>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="mt-3 col">
@@ -91,14 +115,33 @@
 
 <script>
     $(document).ready(function () {
-        $('form').submit(function () {
-            var activeCats = [];
+        // ایجاد ویرایشگر Quill
+        const snowEditor = new Quill('#snow-editor', {
+            bounds: '#snow-editor',
+            modules: {
+                formula: true,
+                toolbar: '#snow-toolbar'
+            },
+            theme: 'snow'
+        });
 
+        $('#postForm').submit(function (event) {
+            // جلوگیری از ارسال فرم تا محتوای ویرایشگر را به فیلد مخفی منتقل کنیم
+            event.preventDefault();
+
+            // گرفتن محتوای ویرایشگر و قرار دادن آن در فیلد مخفی
+            var editorContent = snowEditor.root.innerHTML;
+            $('#hiddenBodyText').val(editorContent);
+
+            // جمع‌آوری دسته‌بندی‌های انتخاب شده
+            var activeCats = [];
             $('.switch-input:checked').each(function () {
                 activeCats.push($(this).data('category-id'));
             });
-
             $('#CategoriesIdString').val(activeCats.join(','));
+
+            // ارسال فرم
+            this.submit();
         });
     });
 </script>
