@@ -2,7 +2,7 @@
 	"use strict";
 
 	function updateFilter() {
-        $('.project_filters a').each(function() {
+        $('.project_filters2 a').each(function() {
             var data_filter = this.getAttribute('data-filter');
             var num = $(this)
                 .closest('.project-filter-wrapper')

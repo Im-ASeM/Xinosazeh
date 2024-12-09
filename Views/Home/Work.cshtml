@@ -1401,7 +1401,7 @@
 										<div class=""project-filter-wrapper"">
 											<div class=""container"">
 												<ul class=""project_filters"">
-													{Pubdo.WorkCatMaker(ViewBag.Categories)}
+													{Pubdo.WorkCatMaker(ViewBag.Categories , ViewBag.Catid)}
 												</ul>
 											</div>
 											<div class=""projects-grid pf_3_cols style-1 img-scale w-auto"" data-load=""3""
@@ -1412,11 +1412,10 @@
 												
 											</div>
 
-											<div class=""btn-block""><a href=""#"" class=""btn-loadmore octf-btn""
-													data-category="""" data-loaded=""بارگذاری بیشتر""
-													data-loading=""بارگذاری"" data-style=""grid"">بارگذاری بیشتر</a></div>
 										</div>
-
+										<ul class=""page-pagination none-style"">
+											{Pubdo.PageMaker(ViewBag.page,ViewBag.AllPage,ViewBag.url)}
+										</ul>
 									</div>
 								</div>
 							</div>

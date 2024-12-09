@@ -17,15 +17,15 @@ public class Pubdo
         }
         return result;
     }
-    static public string WorkCatMaker(List<WorkCategory> cats)
+    static public string WorkCatMaker(List<WorkCategory> cats ,int catid=0)
     {
-        string result = "";
+        string result = $@"<li>
+    <a class=""btn-details {(catid == 0 ? "selected" : "")}"" href='/work'>همه نمونه کار ها</a>
+</li>";
         foreach (WorkCategory cat in cats)
         {
             result += $@"<li>
-    <a class=""btn-details"" href='#'
-        data-filter='.category-{cat.Id}'>{cat.WorkCatName}<span
-            class=""filter-count""></span></a>
+    <a class=""btn-details {(cat.Id == catid ? "selected" : "")}"" href='/work?catid={cat.Id}'>{cat.WorkCatName}</a>
 </li>";
         }
         return result;

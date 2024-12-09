@@ -128,7 +128,7 @@
     * filter projects
     * --------------------------------------------------*/
     function updateFilter() {
-        $('.project_filters a').each(function() {
+        $('.project_filters2 a').each(function() {
             var data_filter = this.getAttribute('data-filter');
             var num = $(this)
                 .closest('.project-filter-wrapper')
@@ -154,7 +154,7 @@
             layoutMode: 'fitRows',
         });
 
-        var $optionSets  = $(this).find('.project_filters'),
+        var $optionSets  = $(this).find('.project_filters2'),
             $optionLinks = $optionSets.find('a');
 
         $optionLinks.on('click', function(){
@@ -163,7 +163,7 @@
             if ( $this.hasClass('selected') ) {
                 return false;
             }
-            var $optionSet = $this.parents('.project_filters');
+            var $optionSet = $this.parents('.project_filters2');
                 $optionSet.find('.selected').removeClass('selected');
                 $this.addClass('selected');
 
