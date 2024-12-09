@@ -44,11 +44,19 @@ public class HomeController : Controller
     }
 
     [HttpGet]
-    public IActionResult Blog()
+    public IActionResult Blog(int page = 1)
     {
+        if (page <= 0) page = 1;
+        
         var blogs = db.BlogPost_tbl.OrderByDescending(x => x.Id).ToList();
         ViewBag.LastBlogs = blogs.Take(2).ToList();
-        ViewBag.blogs = blogs;
+
+        var AllPage = Math.Ceiling((double) blogs.Count / 6);
+        ViewBag.AllPage = Convert.ToInt32(AllPage);
+        ViewBag.Page = page;
+
+        ViewBag.blogs = blogs.Skip((page-1)*6).Take(6).ToList();
+        ViewBag.url = "/blog?page=";
         return View();
     }
 

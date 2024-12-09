@@ -114,7 +114,7 @@ class=""post-box masonry-post-item post-102 post type-post status-publish format
                 sizes=""(max-width: 790px) 100vw, 790px""> </a>
         <div class=""post-cat"">
             <div class=""posted-in"">
-                {(post.KeyWords != null?BlogPostKeyWord(post.KeyWords):"")}
+                {(post.KeyWords != null ? BlogPostKeyWord(post.KeyWords) : "")}
             </div>
         </div>
     </div>
@@ -283,5 +283,36 @@ class=""post-box masonry-post-item post-102 post type-post status-publish format
         {
             return description;
         }
+    }
+
+    public static string PageMaker(int PageNumber, int AllPage, string url)
+    {
+        string result = "";
+        if (PageNumber > 1)
+        {
+            result += $@"<li><a class=""perv page-numbers""
+                                href=""{url}{PageNumber - 1}"">
+                                <i class=""ot-flaticon-right-arrow""></i></a>
+                        </li>
+                        <li><a class=""page-numbers""
+                                href=""{url}{PageNumber - 1}"">{PageNumber - 1}</a>
+                        </li>
+                        ";
+        }
+        result += $@"<li>
+                        <a aria-current=""page"" class=""page-numbers current"">{PageNumber}</a>
+                    </li>
+                    ";
+        if (PageNumber <= AllPage -1)
+        {
+            result += $@"<li><a class=""page-numbers""
+                                href=""{url}{PageNumber + 1}"">{PageNumber + 1}</a></li>
+                        <li><a class=""next page-numbers""
+                                href=""{url}{PageNumber + 1}""><i
+                                    class=""ot-flaticon-right-arrow""></i></a>
+                        </li>
+                        ";
+        }
+        return result;
     }
 }
